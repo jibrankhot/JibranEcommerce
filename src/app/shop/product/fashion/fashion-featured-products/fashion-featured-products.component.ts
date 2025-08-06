@@ -1,11 +1,9 @@
 import { Component, Inject, PLATFORM_ID } from '@angular/core';
 import Swiper from 'swiper';
 import { Navigation, Pagination } from 'swiper/modules';
-
 import { SharedModule } from '../../../../shared.module';
 import { IProduct } from '../../../../shared/types/product-type';
 import { ProductService } from '../../../../shared/services/product.service';
-import { isPlatformBrowser } from '@angular/common';
 import { DomUtilsService } from '../../../../shared/services/dom-utils.service';
 
 @Component({
