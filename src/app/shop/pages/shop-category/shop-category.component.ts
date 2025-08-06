@@ -8,11 +8,10 @@ import { BreadcrumbOneComponent } from "../../../shared/components/breadcrumb/br
 import { HeaderTwoComponent } from "../../../shared/header/header-two/header-two.component";
 
 @Component({
-  selector: 'app-shop-category',
-  templateUrl: './shop-category.component.html',
-  styleUrls: ['./shop-category.component.scss'],
-  standalone: true,
-  imports: [SharedModule, FooterOneComponent, BreadcrumbOneComponent, HeaderTwoComponent]
+    selector: 'app-shop-category',
+    templateUrl: './shop-category.component.html',
+    styleUrls: ['./shop-category.component.scss'],
+    imports: [SharedModule, FooterOneComponent, BreadcrumbOneComponent, HeaderTwoComponent]
 })
 export class ShopCategoryComponent {
   public category_data: ICategory[] = category_data;

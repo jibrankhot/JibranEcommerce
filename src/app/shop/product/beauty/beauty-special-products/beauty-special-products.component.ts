@@ -5,13 +5,13 @@ import { SharedModule } from '../../../../shared.module';
 import { ProductService } from '../../../../shared/services/product.service';
 import { IProduct } from '../../../../shared/types/product-type';
 import { ProductItemThreeComponent } from "../product-item-three/product-item-three.component";
+import { DomUtilsService } from '../../../../shared/services/dom-utils.service';
 
 
 @Component({
   selector: 'app-beauty-special-products',
   templateUrl: './beauty-special-products.component.html',
   styleUrls: ['./beauty-special-products.component.scss'],
-  standalone: true,
   imports: [SharedModule, ProductItemThreeComponent]
 })
 export class BeautySpecialProductsComponent {
@@ -21,25 +21,28 @@ export class BeautySpecialProductsComponent {
 
   public products: IProduct[] = [];
 
-  constructor(public productService: ProductService) {
+  constructor(public productService: ProductService, private domUtil: DomUtilsService) {
     this.productService.products.subscribe((products) => {
       this.products = products.filter((p) => p.productType === "beauty").slice(-4);
     });
   }
 
   ngAfterViewInit() {
-    if (this.swiperContainer) {
-      this.swiperInstance = new Swiper('.tp-special-slider-active', {
-        slidesPerView: 1,
-        spaceBetween: 0,
-        effect: 'fade',
-        modules: [Navigation, Pagination, EffectFade],
-        pagination: {
-          el: ".tp-special-slider-dot",
-          clickable: true
-        }
-      });
-    }
+    this.domUtil.runInBrowser(() => {
+      if (this.swiperContainer) {
+        this.swiperInstance = new Swiper('.tp-special-slider-active', {
+          slidesPerView: 1,
+          spaceBetween: 0,
+          effect: 'fade',
+          modules: [Navigation, Pagination, EffectFade],
+          pagination: {
+            el: ".tp-special-slider-dot",
+            clickable: true
+          }
+        });
+      }
+    });
+
   }
 
 }

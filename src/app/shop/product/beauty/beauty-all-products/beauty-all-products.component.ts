@@ -5,11 +5,10 @@ import { ProductService } from '../../../../shared/services/product.service';
 import { ProductItemThreeComponent } from "../product-item-three/product-item-three.component";
 
 @Component({
-  selector: 'app-beauty-all-products',
-  templateUrl: './beauty-all-products.component.html',
-  styleUrls: ['./beauty-all-products.component.scss'],
-  standalone: true,
-  imports: [SharedModule, ProductItemThreeComponent]
+    selector: 'app-beauty-all-products',
+    templateUrl: './beauty-all-products.component.html',
+    styleUrls: ['./beauty-all-products.component.scss'],
+    imports: [SharedModule, ProductItemThreeComponent]
 })
 export class BeautyAllProductsComponent {
   @ViewChild('navActive') navActive!: ElementRef;

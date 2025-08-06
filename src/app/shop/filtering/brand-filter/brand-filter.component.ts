@@ -8,11 +8,10 @@ import brands_data from '../../../shared/data/brand-data';
 import { ProductService } from '../../../shared/services/product.service';
 
 @Component({
-  selector: 'app-brand-filter',
-  templateUrl: './brand-filter.component.html',
-  styleUrls: ['./brand-filter.component.scss'],
-  standalone: true,
-  imports: [SharedModule]
+    selector: 'app-brand-filter',
+    templateUrl: './brand-filter.component.html',
+    styleUrls: ['./brand-filter.component.scss'],
+    imports: [SharedModule]
 })
 export class BrandFilterComponent {
   public brandsData: IBrand[] = brands_data;

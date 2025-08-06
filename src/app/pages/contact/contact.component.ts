@@ -8,7 +8,6 @@ import { HeaderTwoComponent } from "../../shared/header/header-two/header-two.co
     selector: 'app-contact',
     templateUrl: './contact.component.html',
     styleUrls: ['./contact.component.scss'],
-    standalone: true,
     imports: [SharedModule, FooterOneComponent, ContactFormComponent, HeaderTwoComponent]
 })
 export class ContactComponent {

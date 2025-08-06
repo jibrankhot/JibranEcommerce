@@ -4,11 +4,10 @@ import { FormControl, FormGroup, Validators } from '@angular/forms';
 import { SharedModule } from '../../../../shared.module';
 
 @Component({
-  selector: 'app-blog-reply-form',
-  templateUrl: './blog-reply-form.component.html',
-  styleUrls: ['./blog-reply-form.component.scss'],
-  standalone: true,
-  imports: [SharedModule]
+    selector: 'app-blog-reply-form',
+    templateUrl: './blog-reply-form.component.html',
+    styleUrls: ['./blog-reply-form.component.scss'],
+    imports: [SharedModule]
 })
 export class BlogReplyFormComponent {
 

@@ -8,11 +8,10 @@ import { BreadcrumbOneComponent } from "../../../shared/components/breadcrumb/br
 import { FooterOneComponent } from "../../../shared/footer/footer-one/footer-one.component";
 
 @Component({
-  selector: 'app-compare',
-  templateUrl: './compare.component.html',
-  styleUrls: ['./compare.component.scss'],
-  standalone: true,
-  imports: [SharedModule, HeaderTwoComponent, BreadcrumbOneComponent, FooterOneComponent]
+    selector: 'app-compare',
+    templateUrl: './compare.component.html',
+    styleUrls: ['./compare.component.scss'],
+    imports: [SharedModule, HeaderTwoComponent, BreadcrumbOneComponent, FooterOneComponent]
 })
 export class CompareComponent {
 

@@ -2,13 +2,13 @@ import { Component, ElementRef, ViewChild, Input } from '@angular/core';
 import Swiper from 'swiper';
 import { Navigation, Pagination, EffectFade } from 'swiper/modules';
 import { SharedModule } from '../../../../shared.module';
+import { DomUtilsService } from '../../../services/dom-utils.service';
 
 
 @Component({
   selector: 'app-hero-banner-one',
   templateUrl: './hero-banner-one.component.html',
   styleUrls: ['./hero-banner-one.component.scss'],
-  standalone: true,
   imports: [SharedModule]
 })
 export class HeroBannerOneComponent {
@@ -16,6 +16,8 @@ export class HeroBannerOneComponent {
   @ViewChild('swiperContainer') swiperContainer!: ElementRef;
   public swiperInstance: Swiper | undefined;
   public swiperIndex: number = 0;
+
+  constructor(private domUtil: DomUtilsService) { };
 
   public HomeSliderData = [
     {
@@ -57,23 +59,26 @@ export class HeroBannerOneComponent {
   ];
 
   ngAfterViewInit() {
-    if (this.swiperContainer) {
-      this.swiperInstance = new Swiper('.tp-slider-active', {
-        slidesPerView: 1,
-        spaceBetween: 30,
-        loop: false,
-        effect: 'fade',
-        modules: [EffectFade, Pagination],
-        pagination: {
-          el: ".tp-slider-dot",
-          clickable: true
-        },
-        on: {
-          slideChange: () => {
-            this.swiperIndex = this.swiperInstance?.realIndex || 0;
+    this.domUtil.runInBrowser(() => {
+      if (this.swiperContainer) {
+        this.swiperInstance = new Swiper('.tp-slider-active', {
+          slidesPerView: 1,
+          spaceBetween: 30,
+          loop: false,
+          effect: 'fade',
+          modules: [EffectFade, Pagination],
+          pagination: {
+            el: ".tp-slider-dot",
+            clickable: true
+          },
+          on: {
+            slideChange: () => {
+              this.swiperIndex = this.swiperInstance?.realIndex || 0;
+            }
           }
-        }
-      })
-    }
+        })
+      }
+    });
+
   }
 }

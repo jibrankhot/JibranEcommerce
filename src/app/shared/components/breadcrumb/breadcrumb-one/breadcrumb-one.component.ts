@@ -2,11 +2,10 @@ import { Component, Input } from '@angular/core';
 import { SharedModule } from '../../../../shared.module';
 
 @Component({
-  selector: 'app-breadcrumb-one',
-  templateUrl: './breadcrumb-one.component.html',
-  styleUrls: ['./breadcrumb-one.component.scss'],
-  standalone: true,
-  imports: [SharedModule]
+    selector: 'app-breadcrumb-one',
+    templateUrl: './breadcrumb-one.component.html',
+    styleUrls: ['./breadcrumb-one.component.scss'],
+    imports: [SharedModule]
 })
 export class BreadcrumbOneComponent {
 

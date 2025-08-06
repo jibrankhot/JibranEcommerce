@@ -10,11 +10,10 @@ import { ShopDetailsBreadcrumbComponent } from "../../../shared/components/bread
 import { HeaderTwoComponent } from "../../../shared/header/header-two/header-two.component";
 
 @Component({
-  selector: 'app-product-details-list',
-  templateUrl: './product-details-list.component.html',
-  styleUrls: ['./product-details-list.component.scss'],
-  standalone: true,
-  imports: [SharedModule, FooterOneComponent, RelatedProductsComponent, ProductDetailsTabNavComponent, ProductDetailsWrapperComponent, ShopDetailsBreadcrumbComponent, HeaderTwoComponent]
+    selector: 'app-product-details-list',
+    templateUrl: './product-details-list.component.html',
+    styleUrls: ['./product-details-list.component.scss'],
+    imports: [SharedModule, FooterOneComponent, RelatedProductsComponent, ProductDetailsTabNavComponent, ProductDetailsWrapperComponent, ShopDetailsBreadcrumbComponent, HeaderTwoComponent]
 })
 export class ProductDetailsListComponent {
   public product!: IProduct;

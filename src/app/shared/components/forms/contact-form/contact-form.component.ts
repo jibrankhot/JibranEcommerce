@@ -4,11 +4,10 @@ import { FormControl, FormGroup, Validators } from '@angular/forms';
 import { SharedModule } from '../../../../shared.module';
 
 @Component({
-  selector: 'app-contact-form',
-  templateUrl: './contact-form.component.html',
-  styleUrls: ['./contact-form.component.scss'],
-  standalone: true,
-  imports: [SharedModule]
+    selector: 'app-contact-form',
+    templateUrl: './contact-form.component.html',
+    styleUrls: ['./contact-form.component.scss'],
+    imports: [SharedModule]
 })
 export class ContactFormComponent {
   public contactForm!: FormGroup;

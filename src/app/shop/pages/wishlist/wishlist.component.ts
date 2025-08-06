@@ -8,11 +8,10 @@ import { BreadcrumbOneComponent } from "../../../shared/components/breadcrumb/br
 import { HeaderTwoComponent } from "../../../shared/header/header-two/header-two.component";
 
 @Component({
-  selector: 'app-wishlist',
-  templateUrl: './wishlist.component.html',
-  styleUrls: ['./wishlist.component.scss'],
-  standalone: true,
-  imports: [SharedModule, FooterOneComponent, BreadcrumbOneComponent, HeaderTwoComponent]
+    selector: 'app-wishlist',
+    templateUrl: './wishlist.component.html',
+    styleUrls: ['./wishlist.component.scss'],
+    imports: [SharedModule, FooterOneComponent, BreadcrumbOneComponent, HeaderTwoComponent]
 })
 export class WishlistComponent {
 

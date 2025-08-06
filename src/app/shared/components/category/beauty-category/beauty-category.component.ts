@@ -6,11 +6,10 @@ const categoryItems = categoryData.filter(c => c.productType === "beauty");
 
 
 @Component({
-  selector: 'app-beauty-category',
-  templateUrl: './beauty-category.component.html',
-  styleUrls: ['./beauty-category.component.scss'],
-  standalone: true,
-  imports: [SharedModule]
+    selector: 'app-beauty-category',
+    templateUrl: './beauty-category.component.html',
+    styleUrls: ['./beauty-category.component.scss'],
+    imports: [SharedModule]
 })
 export class BeautyCategoryComponent {
 

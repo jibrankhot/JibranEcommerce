@@ -11,11 +11,10 @@ import { BreadcrumbOneComponent } from "../../shared/components/breadcrumb/bread
 import { HeaderTwoComponent } from "../../shared/header/header-two/header-two.component";
 
 @Component({
-  selector: 'app-search',
-  templateUrl: './search.component.html',
-  styleUrls: ['./search.component.scss'],
-  standalone: true,
-  imports: [SharedModule, FooterOneComponent, ProductItemTwoComponent, NiceSelectComponent, BreadcrumbOneComponent, HeaderTwoComponent]
+    selector: 'app-search',
+    templateUrl: './search.component.html',
+    styleUrls: ['./search.component.scss'],
+    imports: [SharedModule, FooterOneComponent, ProductItemTwoComponent, NiceSelectComponent, BreadcrumbOneComponent, HeaderTwoComponent]
 })
 export class SearchComponent {
   public products: IProduct[] = [];

@@ -9,7 +9,6 @@ import { FooterOneComponent } from "../../../shared/footer/footer-one/footer-one
     selector: 'app-shop-full-width',
     templateUrl: './shop-full-width.component.html',
     styleUrls: ['./shop-full-width.component.scss'],
-    standalone: true,
     imports: [SharedModule, HeaderTwoComponent, BreadcrumbOneComponent, ShopAreaComponent, FooterOneComponent]
 })
 export class ShopFullWidthComponent {

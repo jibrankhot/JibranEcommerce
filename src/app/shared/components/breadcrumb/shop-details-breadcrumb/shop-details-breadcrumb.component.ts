@@ -4,11 +4,10 @@ import { SharedModule } from '../../../../shared.module';
 import { IProduct } from '../../../types/product-type';
 
 @Component({
-  selector: 'app-shop-details-breadcrumb',
-  templateUrl: './shop-details-breadcrumb.component.html',
-  styleUrls: ['./shop-details-breadcrumb.component.scss'],
-  standalone: true,
-  imports: [SharedModule]
+    selector: 'app-shop-details-breadcrumb',
+    templateUrl: './shop-details-breadcrumb.component.html',
+    styleUrls: ['./shop-details-breadcrumb.component.scss'],
+    imports: [SharedModule]
 })
 export class ShopDetailsBreadcrumbComponent {
   @Input() product!: IProduct

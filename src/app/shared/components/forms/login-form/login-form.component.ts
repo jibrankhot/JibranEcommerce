@@ -4,11 +4,10 @@ import { FormControl, FormGroup, Validators } from '@angular/forms';
 import { SharedModule } from '../../../../shared.module';
 
 @Component({
-  selector: 'app-login-form',
-  templateUrl: './login-form.component.html',
-  styleUrls: ['./login-form.component.scss'],
-  standalone: true,
-  imports: [SharedModule]
+    selector: 'app-login-form',
+    templateUrl: './login-form.component.html',
+    styleUrls: ['./login-form.component.scss'],
+    imports: [SharedModule]
 })
 export class LoginFormComponent {
 

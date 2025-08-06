@@ -9,11 +9,10 @@ import { ProductService } from '../../../shared/services/product.service';
 import { SharedModule } from '../../../shared.module';
 
 @Component({
-  selector: 'app-price-filter',
-  templateUrl: './price-filter.component.html',
-  styleUrls: ['./price-filter.component.scss'],
-  standalone: true,
-  imports: [SharedModule]
+    selector: 'app-price-filter',
+    templateUrl: './price-filter.component.html',
+    styleUrls: ['./price-filter.component.scss'],
+    imports: [SharedModule]
 })
 export class PriceFilterComponent {
   // Using Output EventEmitter

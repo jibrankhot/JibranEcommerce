@@ -7,11 +7,10 @@ import { CartService } from '../../../services/cart.service';
 import { CountdownTimerComponent } from "../../countdown-timer/countdown-timer.component";
 
 @Component({
-  selector: 'app-product-details-wrapper',
-  templateUrl: './product-details-wrapper.component.html',
-  styleUrls: ['./product-details-wrapper.component.scss'],
-  standalone: true,
-  imports: [SharedModule, CountdownTimerComponent]
+    selector: 'app-product-details-wrapper',
+    templateUrl: './product-details-wrapper.component.html',
+    styleUrls: ['./product-details-wrapper.component.scss'],
+    imports: [SharedModule, CountdownTimerComponent]
 })
 export class ProductDetailsWrapperComponent {
   @Input() product!: IProduct;

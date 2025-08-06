@@ -9,7 +9,6 @@ import { FooterOneComponent } from "../../../shared/footer/footer-one/footer-one
     selector: 'app-shop-no-sidebar',
     templateUrl: './shop-no-sidebar.component.html',
     styleUrls: ['./shop-no-sidebar.component.scss'],
-    standalone: true,
     imports: [SharedModule, HeaderTwoComponent, BreadcrumbOneComponent, ShopAreaComponent, FooterOneComponent]
 })
 export class ShopNoSidebarComponent {

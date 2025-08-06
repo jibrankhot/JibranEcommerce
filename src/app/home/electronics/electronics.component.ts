@@ -19,7 +19,6 @@ import { HeaderOneComponent } from "../../shared/header/header-one/header-one.co
     selector: 'app-electronics',
     templateUrl: './electronics.component.html',
     styleUrls: ['./electronics.component.scss'],
-    standalone: true,
     imports: [SharedModule, FooterOneComponent, InstagramAreaOneComponent, ElectronicBlogAreaComponent, ElectronicSmProductsComponent, ElectronicNewProductsComponent, ElectronicProductBannerComponent, ElectronicGadgetProductsComponent, ElectronicOfferProductsComponent, ElectronicTrendingProductsComponent, FeatureOneComponent, ElectronicCategoryComponent, HeroBannerOneComponent, HeaderOneComponent]
 })
 export class ElectronicsComponent {

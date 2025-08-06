@@ -9,7 +9,6 @@ import { HeaderTwoComponent } from "../../../shared/header/header-two/header-two
     selector: 'app-shop-list',
     templateUrl: './shop-list.component.html',
     styleUrls: ['./shop-list.component.scss'],
-    standalone: true,
     imports: [SharedModule, ShopAreaComponent, FooterOneComponent, BreadcrumbOneComponent, HeaderTwoComponent]
 })
 export class ShopListComponent {

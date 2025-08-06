@@ -17,11 +17,10 @@ import { PaginationComponent } from "../../shared/ui/pagination/pagination.compo
 
 
 @Component({
-  selector: 'app-shop-area',
-  templateUrl: './shop-area.component.html',
-  styleUrls: ['./shop-area.component.scss'],
-  standalone: true,
-  imports: [SharedModule, PriceFilterComponent, StatusFilterComponent, CategoryFilterComponent, TopRatedProductsComponent, BrandFilterComponent, ResetFilterRouteComponent, NiceSelectComponent, ProductItemTwoComponent, ProductListItemComponent, PaginationComponent]
+    selector: 'app-shop-area',
+    templateUrl: './shop-area.component.html',
+    styleUrls: ['./shop-area.component.scss'],
+    imports: [SharedModule, PriceFilterComponent, StatusFilterComponent, CategoryFilterComponent, TopRatedProductsComponent, BrandFilterComponent, ResetFilterRouteComponent, NiceSelectComponent, ProductItemTwoComponent, ProductListItemComponent, PaginationComponent]
 })
 export class ShopAreaComponent {
   @Input() listStyle: boolean = false;

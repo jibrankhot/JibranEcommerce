@@ -10,11 +10,10 @@ import { BreadcrumbOneComponent } from "../../../shared/components/breadcrumb/br
 import { HeaderTwoComponent } from "../../../shared/header/header-two/header-two.component";
 
 @Component({
-  selector: 'app-shop',
-  templateUrl: './shop.component.html',
-  styleUrls: ['./shop.component.scss'],
-  standalone: true,
-  imports: [SharedModule, FooterOneComponent, ShopAreaComponent, BreadcrumbOneComponent, HeaderTwoComponent]
+    selector: 'app-shop',
+    templateUrl: './shop.component.html',
+    styleUrls: ['./shop.component.scss'],
+    imports: [SharedModule, FooterOneComponent, ShopAreaComponent, BreadcrumbOneComponent, HeaderTwoComponent]
 })
 export class ShopComponent {
   @Input() listStyle: boolean = false;

@@ -5,11 +5,10 @@ import { ProductService } from '../../../../shared/services/product.service';
 import { ProductItemOneComponent } from "../product-item-one/product-item-one.component";
 
 @Component({
-  selector: 'app-electronic-gadget-products',
-  templateUrl: './electronic-gadget-products.component.html',
-  styleUrls: ['./electronic-gadget-products.component.scss'],
-  standalone: true,
-  imports: [SharedModule, ProductItemOneComponent]
+    selector: 'app-electronic-gadget-products',
+    templateUrl: './electronic-gadget-products.component.html',
+    styleUrls: ['./electronic-gadget-products.component.scss'],
+    imports: [SharedModule, ProductItemOneComponent]
 })
 export class ElectronicGadgetProductsComponent {
   // electronic prd

@@ -2,11 +2,10 @@ import { Component } from '@angular/core';
 import { SharedModule } from '../../../../shared.module';
 
 @Component({
-  selector: 'app-instagram-area-one',
-  templateUrl: './instagram-area-one.component.html',
-  styleUrls: ['./instagram-area-one.component.scss'],
-  standalone: true,
-  imports: [SharedModule]
+    selector: 'app-instagram-area-one',
+    templateUrl: './instagram-area-one.component.html',
+    styleUrls: ['./instagram-area-one.component.scss'],
+    imports: [SharedModule]
 })
 export class InstagramAreaOneComponent {
 

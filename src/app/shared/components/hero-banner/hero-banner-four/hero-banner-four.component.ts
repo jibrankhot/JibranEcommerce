@@ -2,19 +2,21 @@ import { Component } from '@angular/core';
 import Swiper from 'swiper';
 import { register } from 'swiper/element/bundle';
 import { SharedModule } from '../../../../shared.module';
+import { DomUtilsService } from '../../../services/dom-utils.service';
 register();
 
 @Component({
   selector: 'app-hero-banner-four',
   templateUrl: './hero-banner-four.component.html',
   styleUrls: ['./hero-banner-four.component.scss'],
-  standalone: true,
   imports: [SharedModule]
 })
 export class HeroBannerFourComponent {
   thumbsSwiper: Swiper | undefined;
 
   play: boolean = false;
+
+  constructor(private domUtil: DomUtilsService) { }
 
   setThumbsSwiper(swiper: Swiper) {
     this.thumbsSwiper = swiper;
@@ -74,24 +76,27 @@ export class HeroBannerFourComponent {
   ];
 
   ngOnInit() {
-    const swiper = new Swiper(".tp-slider-nav-active", {
-      spaceBetween: 10,
-      slidesPerView: 3,
-      freeMode: true,
-      watchSlidesProgress: true,
-      direction: 'vertical',
+    this.domUtil.runInBrowser(() => {
+      const swiper = new Swiper(".tp-slider-nav-active", {
+        spaceBetween: 10,
+        slidesPerView: 3,
+        freeMode: true,
+        watchSlidesProgress: true,
+        direction: 'vertical',
+      });
+      new Swiper(".tp-slider-active-4", {
+        slidesPerView: 1,
+        spaceBetween: 0,
+        effect: 'fade',
+        thumbs: {
+          swiper: swiper,
+        },
+        navigation: {
+          nextEl: ".tp-slider-3-button-next",
+          prevEl: ".tp-slider-3-button-prev",
+        },
+      });
     });
-    new Swiper(".tp-slider-active-4", {
-      slidesPerView: 1,
-      spaceBetween: 0,
-      effect: 'fade',
-      thumbs: {
-        swiper: swiper,
-      },
-      navigation: {
-        nextEl: ".tp-slider-3-button-next",
-        prevEl: ".tp-slider-3-button-prev",
-      },
-    });
+
   }
 }

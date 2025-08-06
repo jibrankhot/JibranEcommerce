@@ -4,11 +4,10 @@ import { SharedModule } from '../../../../../shared.module';
 import { IBlogType } from '../../../../types/blog-type';
 
 @Component({
-  selector: 'app-blog-item-two',
-  templateUrl: './blog-item-two.component.html',
-  styleUrls: ['./blog-item-two.component.scss'],
-  standalone: true,
-  imports: [SharedModule]
+    selector: 'app-blog-item-two',
+    templateUrl: './blog-item-two.component.html',
+    styleUrls: ['./blog-item-two.component.scss'],
+    imports: [SharedModule]
 })
 export class BlogItemTwoComponent {
 

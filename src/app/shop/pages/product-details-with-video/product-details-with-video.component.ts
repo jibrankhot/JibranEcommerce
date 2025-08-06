@@ -12,11 +12,10 @@ import { HeaderTwoComponent } from "../../../shared/header/header-two/header-two
 
 
 @Component({
-  selector: 'app-product-details-with-video',
-  templateUrl: './product-details-with-video.component.html',
-  styleUrls: ['./product-details-with-video.component.scss'],
-  standalone: true,
-  imports: [SharedModule, RelatedProductsComponent, FooterOneComponent, ProductDetailsTabNavComponent, ProductDetailsWrapperComponent, ProductDetailsThumbComponent, ShopDetailsBreadcrumbComponent, HeaderTwoComponent]
+    selector: 'app-product-details-with-video',
+    templateUrl: './product-details-with-video.component.html',
+    styleUrls: ['./product-details-with-video.component.scss'],
+    imports: [SharedModule, RelatedProductsComponent, FooterOneComponent, ProductDetailsTabNavComponent, ProductDetailsWrapperComponent, ProductDetailsThumbComponent, ShopDetailsBreadcrumbComponent, HeaderTwoComponent]
 })
 export class ProductDetailsWithVideoComponent {
   public product!: IProduct;

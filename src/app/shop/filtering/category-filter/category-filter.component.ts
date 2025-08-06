@@ -8,11 +8,10 @@ import category_data from '../../../shared/data/category-data';
 import { ProductService } from '../../../shared/services/product.service';
 
 @Component({
-  selector: 'app-category-filter',
-  templateUrl: './category-filter.component.html',
-  styleUrls: ['./category-filter.component.scss'],
-  standalone: true,
-  imports: [SharedModule]
+    selector: 'app-category-filter',
+    templateUrl: './category-filter.component.html',
+    styleUrls: ['./category-filter.component.scss'],
+    imports: [SharedModule]
 })
 export class CategoryFilterComponent {
   public categoryData: ICategory[] = category_data;

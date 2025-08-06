@@ -2,11 +2,10 @@ import { Component } from '@angular/core';
 import { SharedModule } from '../../shared.module';
 
 @Component({
-  selector: 'app-social-links',
-  templateUrl: './social-links.component.html',
-  styleUrls: ['./social-links.component.scss'],
-  standalone: true,
-  imports: [SharedModule]
+    selector: 'app-social-links',
+    templateUrl: './social-links.component.html',
+    styleUrls: ['./social-links.component.scss'],
+    imports: [SharedModule]
 })
 export class SocialLinksComponent {
 

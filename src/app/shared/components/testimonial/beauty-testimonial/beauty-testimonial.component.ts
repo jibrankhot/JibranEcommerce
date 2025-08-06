@@ -2,15 +2,16 @@ import { Component } from '@angular/core';
 import Swiper from 'swiper';
 import { Navigation, Pagination } from 'swiper/modules';
 import { SharedModule } from '../../../../shared.module';
+import { DomUtilsService } from '../../../services/dom-utils.service';
 
 @Component({
   selector: 'app-beauty-testimonial',
   templateUrl: './beauty-testimonial.component.html',
   styleUrls: ['./beauty-testimonial.component.scss'],
-  standalone: true,
   imports: [SharedModule]
 })
 export class BeautyTestimonialComponent {
+  constructor(private domUtil: DomUtilsService) { }
   // testimonial data
   public testi_data = [
     {
@@ -40,35 +41,38 @@ export class BeautyTestimonialComponent {
   ]
   // swiper setting
   ngOnInit(): void {
-    new Swiper('.tp-testimoinal-slider-active-3', {
-      slidesPerView: 2,
-      spaceBetween: 24,
-      pagination: {
-        el: ".tp-testimoinal-slider-dot-3",
-        clickable: true
-      },
-      modules: [Navigation, Pagination],
-      navigation: {
-        nextEl: ".tp-testimoinal-slider-button-next-3",
-        prevEl: ".tp-testimoinal-slider-button-prev-3",
-      },
-      breakpoints: {
-        '1200': {
-          slidesPerView: 2,
+    this.domUtil.runInBrowser(() => {
+      new Swiper('.tp-testimoinal-slider-active-3', {
+        slidesPerView: 2,
+        spaceBetween: 24,
+        pagination: {
+          el: ".tp-testimoinal-slider-dot-3",
+          clickable: true
         },
-        '992': {
-          slidesPerView: 2,
+        modules: [Navigation, Pagination],
+        navigation: {
+          nextEl: ".tp-testimoinal-slider-button-next-3",
+          prevEl: ".tp-testimoinal-slider-button-prev-3",
         },
-        '768': {
-          slidesPerView: 1,
-        },
-        '576': {
-          slidesPerView: 1,
-        },
-        '0': {
-          slidesPerView: 1,
-        },
-      }
+        breakpoints: {
+          '1200': {
+            slidesPerView: 2,
+          },
+          '992': {
+            slidesPerView: 2,
+          },
+          '768': {
+            slidesPerView: 1,
+          },
+          '576': {
+            slidesPerView: 1,
+          },
+          '0': {
+            slidesPerView: 1,
+          },
+        }
+      });
     });
+
   }
 }

@@ -2,11 +2,10 @@ import { Component, Input, Output, EventEmitter } from '@angular/core';
 import { SharedModule } from '../../../shared.module';
 
 @Component({
-  selector: 'app-nice-select',
-  templateUrl: './nice-select.component.html',
-  styleUrls: ['./nice-select.component.scss'],
-  standalone: true,
-  imports: [SharedModule]
+    selector: 'app-nice-select',
+    templateUrl: './nice-select.component.html',
+    styleUrls: ['./nice-select.component.scss'],
+    imports: [SharedModule]
 })
 export class NiceSelectComponent {
   @Input() options!: { value: string; text: string }[];

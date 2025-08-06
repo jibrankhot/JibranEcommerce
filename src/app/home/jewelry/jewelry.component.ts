@@ -18,12 +18,12 @@ import { JewelryBannerComponent } from "../../shared/components/banner/jewelry-b
 import { HeroBannerFourComponent } from "../../shared/components/hero-banner/hero-banner-four/hero-banner-four.component";
 import { HeaderFourComponent } from "../../shared/header/header-four/header-four.component";
 import { ProductItemFourComponent } from "../../shop/product/jewelry/product-item-four/product-item-four.component";
+import { DomUtilsService } from '../../shared/services/dom-utils.service';
 
 @Component({
   selector: 'app-jewelry',
   templateUrl: './jewelry.component.html',
   styleUrls: ['./jewelry.component.scss'],
-  standalone: true,
   imports: [SharedModule, FooterTwoComponent, JewelryAllProductsComponent, JewelrySliderItemComponent, JewelryBannerComponent, HeroBannerFourComponent, HeaderFourComponent, ProductItemFourComponent]
 })
 export class JewelryComponent {
@@ -34,7 +34,8 @@ export class JewelryComponent {
 
   constructor(
     private sanitizer: DomSanitizer,
-    public productService: ProductService
+    public productService: ProductService,
+    private domUtil: DomUtilsService
   ) {
     this.productService.products.subscribe((products) => {
       this.jewelryPopularItem = products
@@ -92,112 +93,120 @@ export class JewelryComponent {
 
   ngOnInit(): void {
     // jewelry popular slider setting
-    new Swiper('.tp-category-slider-active-4', {
-      modules: [Pagination, Navigation, Scrollbar],
-      slidesPerView: 5,
-      spaceBetween: 25,
-      pagination: {
-        el: '.tp-category-slider-dot-4',
-        clickable: true,
-      },
-      navigation: {
-        nextEl: '.tp-category-slider-button-next-4',
-        prevEl: '.tp-category-slider-button-prev-4',
-      },
-      scrollbar: {
-        el: '.tp-category-swiper-scrollbar',
-        draggable: true,
-        dragClass: 'tp-swiper-scrollbar-drag',
-        snapOnRelease: true,
-      },
-      breakpoints: {
-        '1400': {
-          slidesPerView: 5,
+
+    this.domUtil.runInBrowser(() => {
+      new Swiper('.tp-category-slider-active-4', {
+        modules: [Pagination, Navigation, Scrollbar],
+        slidesPerView: 5,
+        spaceBetween: 25,
+        pagination: {
+          el: '.tp-category-slider-dot-4',
+          clickable: true,
         },
-        '1200': {
-          slidesPerView: 4,
+        navigation: {
+          nextEl: '.tp-category-slider-button-next-4',
+          prevEl: '.tp-category-slider-button-prev-4',
         },
-        '992': {
-          slidesPerView: 3,
+        scrollbar: {
+          el: '.tp-category-swiper-scrollbar',
+          draggable: true,
+          dragClass: 'tp-swiper-scrollbar-drag',
+          snapOnRelease: true,
         },
-        '768': {
-          slidesPerView: 2,
+        breakpoints: {
+          '1400': {
+            slidesPerView: 5,
+          },
+          '1200': {
+            slidesPerView: 4,
+          },
+          '992': {
+            slidesPerView: 3,
+          },
+          '768': {
+            slidesPerView: 2,
+          },
+          '576': {
+            slidesPerView: 2,
+          },
+          '0': {
+            slidesPerView: 1,
+          },
         },
-        '576': {
-          slidesPerView: 2,
+      });
+
+
+      // jewelry best product setting
+      new Swiper('.tp-best-slider-active', {
+        modules: [Pagination, Navigation, Scrollbar],
+        slidesPerView: 4,
+        spaceBetween: 24,
+        pagination: {
+          el: '.tp-best-slider-dot',
+          clickable: true,
         },
-        '0': {
-          slidesPerView: 1,
+        navigation: {
+          nextEl: '.tp-best-slider-button-next',
+          prevEl: '.tp-best-slider-button-prev',
         },
-      },
+        scrollbar: {
+          el: '.tp-best-swiper-scrollbar',
+          draggable: true,
+          dragClass: 'tp-swiper-scrollbar-drag',
+          snapOnRelease: true,
+        },
+        breakpoints: {
+          '1200': {
+            slidesPerView: 4,
+          },
+          '992': {
+            slidesPerView: 4,
+          },
+          '768': {
+            slidesPerView: 2,
+          },
+          '576': {
+            slidesPerView: 2,
+          },
+          '0': {
+            slidesPerView: 1,
+          },
+        },
+      });
+      // jewelry brand setting
+      new Swiper('.tp-brand-slider-active', {
+        modules: [Pagination, Navigation],
+        slidesPerView: 5,
+        spaceBetween: 0,
+        pagination: {
+          el: '.tp-brand-slider-dot',
+          clickable: true,
+        },
+        navigation: {
+          nextEl: '.tp-brand-slider-button-next',
+          prevEl: '.tp-brand-slider-button-prev',
+        },
+        breakpoints: {
+          '1200': {
+            slidesPerView: 5,
+          },
+          '992': {
+            slidesPerView: 5,
+          },
+          '768': {
+            slidesPerView: 4,
+          },
+          '576': {
+            slidesPerView: 3,
+          },
+          '0': {
+            slidesPerView: 1,
+          },
+        },
+      });
     });
-    // jewelry best product setting
-    new Swiper('.tp-best-slider-active', {
-      modules: [Pagination, Navigation, Scrollbar],
-      slidesPerView: 4,
-      spaceBetween: 24,
-      pagination: {
-        el: '.tp-best-slider-dot',
-        clickable: true,
-      },
-      navigation: {
-        nextEl: '.tp-best-slider-button-next',
-        prevEl: '.tp-best-slider-button-prev',
-      },
-      scrollbar: {
-        el: '.tp-best-swiper-scrollbar',
-        draggable: true,
-        dragClass: 'tp-swiper-scrollbar-drag',
-        snapOnRelease: true,
-      },
-      breakpoints: {
-        '1200': {
-          slidesPerView: 4,
-        },
-        '992': {
-          slidesPerView: 4,
-        },
-        '768': {
-          slidesPerView: 2,
-        },
-        '576': {
-          slidesPerView: 2,
-        },
-        '0': {
-          slidesPerView: 1,
-        },
-      },
-    });
-    // jewelry brand setting
-    new Swiper('.tp-brand-slider-active', {
-      modules: [Pagination, Navigation],
-      slidesPerView: 5,
-      spaceBetween: 0,
-      pagination: {
-        el: '.tp-brand-slider-dot',
-        clickable: true,
-      },
-      navigation: {
-        nextEl: '.tp-brand-slider-button-next',
-        prevEl: '.tp-brand-slider-button-prev',
-      },
-      breakpoints: {
-        '1200': {
-          slidesPerView: 5,
-        },
-        '992': {
-          slidesPerView: 5,
-        },
-        '768': {
-          slidesPerView: 4,
-        },
-        '576': {
-          slidesPerView: 3,
-        },
-        '0': {
-          slidesPerView: 1,
-        },
-      },
-    });
+
+
   }
+
 }

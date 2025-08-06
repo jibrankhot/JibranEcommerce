@@ -7,7 +7,6 @@ import { HeaderTwoComponent } from "../../shared/header/header-two/header-two.co
     selector: 'app-not-found',
     templateUrl: './not-found.component.html',
     styleUrls: ['./not-found.component.scss'],
-    standalone: true,
     imports: [SharedModule, FooterOneComponent, HeaderTwoComponent]
 })
 export class NotFoundComponent {

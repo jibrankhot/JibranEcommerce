@@ -18,11 +18,10 @@ import { HeroBannerThreeComponent } from "../../shared/components/hero-banner/he
 import { HeaderThreeComponent } from "../../shared/header/header-three/header-three.component";
 
 @Component({
-  selector: 'app-beauty',
-  imports: [SharedModule, FooterOneComponent, BeautyTestimonialComponent, BeautySpecialProductsComponent, BeautyAllProductsComponent, CountdownTimerComponent, ProductItemThreeComponent, BeautyCategoryComponent, HeroBannerThreeComponent, HeaderThreeComponent],
-  templateUrl: './beauty.component.html',
-  styleUrls: ['./beauty.component.scss'],
-  standalone: true
+    selector: 'app-beauty',
+    imports: [SharedModule, FooterOneComponent, BeautyTestimonialComponent, BeautySpecialProductsComponent, BeautyAllProductsComponent, CountdownTimerComponent, ProductItemThreeComponent, BeautyCategoryComponent, HeroBannerThreeComponent, HeaderThreeComponent],
+    templateUrl: './beauty.component.html',
+    styleUrls: ['./beauty.component.scss']
 })
 export class BeautyComponent {
 

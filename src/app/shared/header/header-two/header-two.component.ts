@@ -11,11 +11,10 @@ import { CartSidebarComponent } from "../../components/offcanvas/cart-sidebar/ca
 import { MobileSidebarComponent } from "../../components/offcanvas/mobile-sidebar/mobile-sidebar.component";
 
 @Component({
-  selector: 'app-header-two',
-  templateUrl: './header-two.component.html',
-  styleUrls: ['./header-two.component.scss'],
-  standalone: true,
-  imports: [SharedModule, HeaderTopBarComponent, MenuBarComponent, CartSidebarComponent, MobileSidebarComponent]
+    selector: 'app-header-two',
+    templateUrl: './header-two.component.html',
+    styleUrls: ['./header-two.component.scss'],
+    imports: [SharedModule, HeaderTopBarComponent, MenuBarComponent, CartSidebarComponent, MobileSidebarComponent]
 })
 export class HeaderTwoComponent {
   @Input() style_2: boolean = false;

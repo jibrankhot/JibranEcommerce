@@ -4,11 +4,10 @@ import { SharedModule } from '../../../../shared.module';
 import { UtilsService } from '../../../services/utils.service';
 
 @Component({
-  selector: 'app-header-search',
-  templateUrl: './header-search.component.html',
-  styleUrls: ['./header-search.component.scss'],
-  standalone: true,
-  imports: [SharedModule]
+    selector: 'app-header-search',
+    templateUrl: './header-search.component.html',
+    styleUrls: ['./header-search.component.scss'],
+    imports: [SharedModule]
 })
 export class HeaderSearchComponent {
   public searchText: string = '';

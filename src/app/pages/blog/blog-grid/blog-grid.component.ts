@@ -11,11 +11,10 @@ import { HeaderTwoComponent } from "../../../shared/header/header-two/header-two
 
 
 @Component({
-  selector: 'app-blog-grid',
-  templateUrl: './blog-grid.component.html',
-  styleUrls: ['./blog-grid.component.scss'],
-  standalone: true,
-  imports: [SharedModule, FooterOneComponent, BlogSidebarComponent, PaginationTwoComponent, BlogListItemComponent, BlogGridItemComponent, HeaderTwoComponent]
+    selector: 'app-blog-grid',
+    templateUrl: './blog-grid.component.html',
+    styleUrls: ['./blog-grid.component.scss'],
+    imports: [SharedModule, FooterOneComponent, BlogSidebarComponent, PaginationTwoComponent, BlogListItemComponent, BlogGridItemComponent, HeaderTwoComponent]
 })
 export class BlogGridComponent {
   @Input() list_style: boolean = false;

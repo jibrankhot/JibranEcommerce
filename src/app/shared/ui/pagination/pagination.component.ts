@@ -5,11 +5,10 @@ import { IProduct } from '../../types/product-type';
 import { IBlogType } from '../../types/blog-type';
 
 @Component({
-  selector: 'app-pagination',
-  templateUrl: './pagination.component.html',
-  styleUrls: ['./pagination.component.scss'],
-  standalone: true,
-  imports: [SharedModule]
+    selector: 'app-pagination',
+    templateUrl: './pagination.component.html',
+    styleUrls: ['./pagination.component.scss'],
+    imports: [SharedModule]
 })
 export class PaginationComponent {
   @Input() products: IProduct[] | IBlogType[] = [];

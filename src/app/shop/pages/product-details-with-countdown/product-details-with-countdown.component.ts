@@ -12,11 +12,10 @@ import { ShopDetailsBreadcrumbComponent } from "../../../shared/components/bread
 import { HeaderTwoComponent } from "../../../shared/header/header-two/header-two.component";
 
 @Component({
-  selector: 'app-product-details-with-countdown',
-  templateUrl: './product-details-with-countdown.component.html',
-  styleUrls: ['./product-details-with-countdown.component.scss'],
-  standalone: true,
-  imports: [SharedModule, FooterOneComponent, RelatedProductsComponent, ProductDetailsTabNavComponent, ProductDetailsWrapperComponent, ProductDetailsThumbComponent, ShopDetailsBreadcrumbComponent, HeaderTwoComponent]
+    selector: 'app-product-details-with-countdown',
+    templateUrl: './product-details-with-countdown.component.html',
+    styleUrls: ['./product-details-with-countdown.component.scss'],
+    imports: [SharedModule, FooterOneComponent, RelatedProductsComponent, ProductDetailsTabNavComponent, ProductDetailsWrapperComponent, ProductDetailsThumbComponent, ShopDetailsBreadcrumbComponent, HeaderTwoComponent]
 })
 export class ProductDetailsWithCountdownComponent {
 

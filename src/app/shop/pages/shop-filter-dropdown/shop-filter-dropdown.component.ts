@@ -19,11 +19,10 @@ import { FooterOneComponent } from "../../../shared/footer/footer-one/footer-one
 import { PriceFilterComponent } from '../../filtering/price-filter/price-filter.component';
 
 @Component({
-  selector: 'app-shop-filter-dropdown',
-  templateUrl: './shop-filter-dropdown.component.html',
-  styleUrls: ['./shop-filter-dropdown.component.scss'],
-  standalone: true,
-  imports: [SharedModule, PriceFilterComponent, HeaderTwoComponent, BreadcrumbOneComponent, NiceSelectComponent, StatusFilterComponent, CategoryFilterComponent, ResetFilterRouteComponent, TopRatedProductsComponent, ProductItemTwoComponent, ProductListItemComponent, PaginationComponent, FooterOneComponent]
+    selector: 'app-shop-filter-dropdown',
+    templateUrl: './shop-filter-dropdown.component.html',
+    styleUrls: ['./shop-filter-dropdown.component.scss'],
+    imports: [SharedModule, PriceFilterComponent, HeaderTwoComponent, BreadcrumbOneComponent, NiceSelectComponent, StatusFilterComponent, CategoryFilterComponent, ResetFilterRouteComponent, TopRatedProductsComponent, ProductItemTwoComponent, ProductListItemComponent, PaginationComponent, FooterOneComponent]
 })
 export class ShopFilterDropdownComponent {
   public products: IProduct[] = [];

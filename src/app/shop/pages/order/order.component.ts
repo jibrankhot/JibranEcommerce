@@ -8,7 +8,6 @@ import { FooterOneComponent } from "../../../shared/footer/footer-one/footer-one
     selector: 'app-order',
     templateUrl: './order.component.html',
     styleUrls: ['./order.component.scss'],
-    standalone: true,
     imports: [SharedModule, HeaderTwoComponent, BreadcrumbOneComponent, FooterOneComponent]
 })
 export class OrderComponent {

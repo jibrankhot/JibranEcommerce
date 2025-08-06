@@ -9,7 +9,6 @@ import { FooterOneComponent } from "../../../shared/footer/footer-one/footer-one
     selector: 'app-shop-sixteen-thousand-px',
     templateUrl: './shop-sixteen-thousand-px.component.html',
     styleUrls: ['./shop-sixteen-thousand-px.component.scss'],
-    standalone: true,
     imports: [SharedModule, HeaderTwoComponent, BreadcrumbOneComponent, ShopAreaComponent, FooterOneComponent]
 })
 export class ShopSixteenThousandPxComponent {

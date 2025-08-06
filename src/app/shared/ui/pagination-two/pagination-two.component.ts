@@ -2,11 +2,10 @@ import { Component, EventEmitter, Input, Output } from '@angular/core';
 import { SharedModule } from '../../../shared.module';
 
 @Component({
-  selector: 'app-pagination-two',
-  templateUrl: './pagination-two.component.html',
-  styleUrls: ['./pagination-two.component.scss'],
-  standalone: true,
-  imports: [SharedModule]
+    selector: 'app-pagination-two',
+    templateUrl: './pagination-two.component.html',
+    styleUrls: ['./pagination-two.component.scss'],
+    imports: [SharedModule]
 })
 export class PaginationTwoComponent {
 

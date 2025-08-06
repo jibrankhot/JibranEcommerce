@@ -8,11 +8,10 @@ import { CountdownTimerComponent } from "../../../../shared/components/countdown
 
 
 @Component({
-  selector: 'app-product-item-one',
-  templateUrl: './product-item-one.component.html',
-  styleUrls: ['./product-item-one.component.scss'],
-  standalone: true,
-  imports: [SharedModule, CountdownTimerComponent]
+    selector: 'app-product-item-one',
+    templateUrl: './product-item-one.component.html',
+    styleUrls: ['./product-item-one.component.scss'],
+    imports: [SharedModule, CountdownTimerComponent]
 })
 export class ProductItemOneComponent {
   @Input() product!: IProduct;

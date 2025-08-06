@@ -6,11 +6,10 @@ import { ProductItemFourComponent } from "../product-item-four/product-item-four
 
 
 @Component({
-  selector: 'app-jewelry-all-products',
-  templateUrl: './jewelry-all-products.component.html',
-  styleUrls: ['./jewelry-all-products.component.scss'],
-  standalone: true,
-  imports: [SharedModule, ProductItemFourComponent]
+    selector: 'app-jewelry-all-products',
+    templateUrl: './jewelry-all-products.component.html',
+    styleUrls: ['./jewelry-all-products.component.scss'],
+    imports: [SharedModule, ProductItemFourComponent]
 })
 export class JewelryAllProductsComponent {
 

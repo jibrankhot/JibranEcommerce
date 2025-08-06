@@ -9,7 +9,6 @@ import { FooterOneComponent } from "../../../shared/footer/footer-one/footer-one
     selector: 'app-shop-right-sidebar',
     templateUrl: './shop-right-sidebar.component.html',
     styleUrls: ['./shop-right-sidebar.component.scss'],
-    standalone: true,
     imports: [SharedModule, HeaderTwoComponent, BreadcrumbOneComponent, ShopAreaComponent, FooterOneComponent]
 })
 export class ShopRightSidebarComponent {

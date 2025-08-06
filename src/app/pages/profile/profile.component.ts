@@ -5,11 +5,10 @@ import { NiceSelectComponent } from "../../shared/ui/nice-select/nice-select.com
 import { HeaderTwoComponent } from "../../shared/header/header-two/header-two.component";
 
 @Component({
-  selector: 'app-profile',
-  templateUrl: './profile.component.html',
-  styleUrls: ['./profile.component.scss'],
-  standalone: true,
-  imports: [SharedModule, FooterOneComponent, NiceSelectComponent, HeaderTwoComponent]
+    selector: 'app-profile',
+    templateUrl: './profile.component.html',
+    styleUrls: ['./profile.component.scss'],
+    imports: [SharedModule, FooterOneComponent, NiceSelectComponent, HeaderTwoComponent]
 })
 export class ProfileComponent {
 

@@ -6,11 +6,10 @@ import { HeaderTwoComponent } from "../../shared/header/header-two/header-two.co
 import { FooterOneComponent } from "../../shared/footer/footer-one/footer-one.component";
 
 @Component({
-  selector: 'app-forgot-password',
-  templateUrl: './forgot-password.component.html',
-  styleUrls: ['./forgot-password.component.scss'],
-  standalone: true,
-  imports: [SharedModule, HeaderTwoComponent, FooterOneComponent]
+    selector: 'app-forgot-password',
+    templateUrl: './forgot-password.component.html',
+    styleUrls: ['./forgot-password.component.scss'],
+    imports: [SharedModule, HeaderTwoComponent, FooterOneComponent]
 })
 export class ForgotPasswordComponent {
 

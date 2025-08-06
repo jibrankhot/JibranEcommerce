@@ -4,11 +4,10 @@ import { FormControl, FormGroup, Validators } from '@angular/forms';
 import { SharedModule } from '../../../../shared.module';
 
 @Component({
-  selector: 'app-register-form',
-  templateUrl: './register-form.component.html',
-  styleUrls: ['./register-form.component.scss'],
-  standalone: true,
-  imports: [SharedModule]
+    selector: 'app-register-form',
+    templateUrl: './register-form.component.html',
+    styleUrls: ['./register-form.component.scss'],
+    imports: [SharedModule]
 })
 export class RegisterFormComponent {
 

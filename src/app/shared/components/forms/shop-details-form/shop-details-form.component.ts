@@ -4,11 +4,10 @@ import { FormControl, FormGroup, Validators } from '@angular/forms';
 import { SharedModule } from '../../../../shared.module';
 
 @Component({
-  selector: 'app-shop-details-form',
-  templateUrl: './shop-details-form.component.html',
-  styleUrls: ['./shop-details-form.component.scss'],
-  standalone: true,
-  imports: [SharedModule]
+    selector: 'app-shop-details-form',
+    templateUrl: './shop-details-form.component.html',
+    styleUrls: ['./shop-details-form.component.scss'],
+    imports: [SharedModule]
 })
 export class ShopDetailsFormComponent {
 

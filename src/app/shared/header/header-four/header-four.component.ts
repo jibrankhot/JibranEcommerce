@@ -10,11 +10,10 @@ import { CartSidebarComponent } from "../../components/offcanvas/cart-sidebar/ca
 import { MenuBarComponent } from "../header-com/menu-bar/menu-bar.component";
 
 @Component({
-  selector: 'app-header-four',
-  templateUrl: './header-four.component.html',
-  styleUrls: ['./header-four.component.scss'],
-  standalone: true,
-  imports: [SharedModule, MobileSidebarComponent, HeaderSearchComponent, CartSidebarComponent, MenuBarComponent]
+    selector: 'app-header-four',
+    templateUrl: './header-four.component.html',
+    styleUrls: ['./header-four.component.scss'],
+    imports: [SharedModule, MobileSidebarComponent, HeaderSearchComponent, CartSidebarComponent, MenuBarComponent]
 })
 export class HeaderFourComponent {
 

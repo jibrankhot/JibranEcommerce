@@ -20,11 +20,10 @@ import { CategoryFilterComponent } from "../../filtering/category-filter/categor
 import { StatusFilterComponent } from "../../filtering/status-filter/status-filter.component";
 
 @Component({
-  selector: 'app-shop-filter-offcanvas',
-  templateUrl: './shop-filter-offcanvas.component.html',
-  styleUrls: ['./shop-filter-offcanvas.component.scss'],
-  standalone: true,
-  imports: [SharedModule, PriceFilterComponent, HeaderTwoComponent, BreadcrumbOneComponent, NiceSelectComponent, ProductItemTwoComponent, ProductListItemComponent, PaginationComponent, FooterOneComponent, ResetFilterRouteComponent, BrandFilterComponent, TopRatedProductsComponent, CategoryFilterComponent, StatusFilterComponent]
+    selector: 'app-shop-filter-offcanvas',
+    templateUrl: './shop-filter-offcanvas.component.html',
+    styleUrls: ['./shop-filter-offcanvas.component.scss'],
+    imports: [SharedModule, PriceFilterComponent, HeaderTwoComponent, BreadcrumbOneComponent, NiceSelectComponent, ProductItemTwoComponent, ProductListItemComponent, PaginationComponent, FooterOneComponent, ResetFilterRouteComponent, BrandFilterComponent, TopRatedProductsComponent, CategoryFilterComponent, StatusFilterComponent]
 })
 export class ShopFilterOffcanvasComponent {
 

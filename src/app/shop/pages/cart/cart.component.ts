@@ -7,11 +7,10 @@ import { BreadcrumbOneComponent } from "../../../shared/components/breadcrumb/br
 import { FooterOneComponent } from "../../../shared/footer/footer-one/footer-one.component";
 
 @Component({
-  selector: 'app-cart',
-  templateUrl: './cart.component.html',
-  styleUrls: ['./cart.component.scss'],
-  standalone: true,
-  imports: [SharedModule, HeaderTwoComponent, BreadcrumbOneComponent, FooterOneComponent]
+    selector: 'app-cart',
+    templateUrl: './cart.component.html',
+    styleUrls: ['./cart.component.scss'],
+    imports: [SharedModule, HeaderTwoComponent, BreadcrumbOneComponent, FooterOneComponent]
 })
 export class CartComponent {
 

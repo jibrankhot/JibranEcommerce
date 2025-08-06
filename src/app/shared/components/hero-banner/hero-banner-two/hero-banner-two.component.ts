@@ -1,14 +1,16 @@
-import { Component } from '@angular/core';
+import { Component, Inject, PLATFORM_ID } from '@angular/core';
+import { isPlatformBrowser } from '@angular/common';
 import Swiper from 'swiper';
 import { Navigation, Pagination, EffectFade } from 'swiper/modules';
 import { SharedModule } from '../../../../shared.module';
+import { DomUtilsService } from '../../../services/dom-utils.service';
 
 @Component({
   selector: 'app-hero-banner-two',
   templateUrl: './hero-banner-two.component.html',
   styleUrls: ['./hero-banner-two.component.scss'],
-  standalone: true,
-  imports: [SharedModule]
+  imports: [SharedModule],
+  standalone: true
 })
 export class HeroBannerTwoComponent {
   public slider_data = [
@@ -32,21 +34,27 @@ export class HeroBannerTwoComponent {
     },
   ];
 
+  constructor(private domUtil: DomUtilsService) { }
+
   ngOnInit(): void {
-    new Swiper('.tp-slider-active-2', {
-      slidesPerView: 1,
-      spaceBetween: 30,
-      loop: false,
-      effect: 'fade',
-      modules: [Navigation, Pagination, EffectFade],
-      navigation: {
-        nextEl: ".tp-slider-2-button-next",
-        prevEl: ".tp-slider-2-button-prev",
-      },
-      pagination: {
-        el: ".tp-slider-2-dot",
-        clickable: true
-      },
+    this.domUtil.runInBrowser(() => {
+      // run swiper init only in browser
+      new Swiper('.tp-slider-active-2', {
+        slidesPerView: 1,
+        spaceBetween: 30,
+        loop: false,
+        effect: 'fade',
+        modules: [Navigation, Pagination, EffectFade],
+        navigation: {
+          nextEl: ".tp-slider-2-button-next",
+          prevEl: ".tp-slider-2-button-prev",
+        },
+        pagination: {
+          el: ".tp-slider-2-dot",
+          clickable: true
+        },
+      });
     });
+
   }
 }

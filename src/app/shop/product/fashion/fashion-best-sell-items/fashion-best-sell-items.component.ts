@@ -6,11 +6,10 @@ import { ProductItemTwoComponent } from "../product-item-two/product-item-two.co
 
 
 @Component({
-  selector: 'app-fashion-best-sell-items',
-  templateUrl: './fashion-best-sell-items.component.html',
-  styleUrls: ['./fashion-best-sell-items.component.scss'],
-  standalone: true,
-  imports: [SharedModule, ProductItemTwoComponent]
+    selector: 'app-fashion-best-sell-items',
+    templateUrl: './fashion-best-sell-items.component.html',
+    styleUrls: ['./fashion-best-sell-items.component.scss'],
+    imports: [SharedModule, ProductItemTwoComponent]
 })
 export class FashionBestSellItemsComponent {
 

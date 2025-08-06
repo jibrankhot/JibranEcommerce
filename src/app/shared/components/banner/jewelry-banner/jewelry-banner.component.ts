@@ -5,7 +5,6 @@ import { SharedModule } from '../../../../shared.module';
     selector: 'app-jewelry-banner',
     templateUrl: './jewelry-banner.component.html',
     styleUrls: ['./jewelry-banner.component.scss'],
-    standalone: true,
     imports: [SharedModule]
 })
 export class JewelryBannerComponent {

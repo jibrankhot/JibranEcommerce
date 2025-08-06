@@ -6,11 +6,10 @@ import { ProductService } from '../../../../shared/services/product.service';
 import { ProductItemOneComponent } from "../product-item-one/product-item-one.component";
 
 @Component({
-  selector: 'app-electronic-trending-products',
-  templateUrl: './electronic-trending-products.component.html',
-  styleUrls: ['./electronic-trending-products.component.scss'],
-  standalone: true,
-  imports: [SharedModule, ProductItemOneComponent]
+    selector: 'app-electronic-trending-products',
+    templateUrl: './electronic-trending-products.component.html',
+    styleUrls: ['./electronic-trending-products.component.scss'],
+    imports: [SharedModule, ProductItemOneComponent]
 })
 export class ElectronicTrendingProductsComponent {
   // electronic prd

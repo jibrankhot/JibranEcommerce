@@ -9,11 +9,10 @@ import { BlogDetailsAreaComponent } from "../../../shared/components/blog/blog-d
 import { HeaderTwoComponent } from "../../../shared/header/header-two/header-two.component";
 
 @Component({
-  selector: 'app-dynamic-blog-details',
-  templateUrl: './dynamic-blog-details.component.html',
-  styleUrls: ['./dynamic-blog-details.component.scss'],
-  standalone: true,
-  imports: [SharedModule, FooterOneComponent, BlogDetailsAreaComponent, HeaderTwoComponent]
+    selector: 'app-dynamic-blog-details',
+    templateUrl: './dynamic-blog-details.component.html',
+    styleUrls: ['./dynamic-blog-details.component.scss'],
+    imports: [SharedModule, FooterOneComponent, BlogDetailsAreaComponent, HeaderTwoComponent]
 })
 export class DynamicBlogDetailsComponent {
 

@@ -8,11 +8,10 @@ import { BreadcrumbOneComponent } from "../../shared/components/breadcrumb/bread
 import { HeaderTwoComponent } from "../../shared/header/header-two/header-two.component";
 
 @Component({
-  selector: 'app-coupon',
-  templateUrl: './coupon.component.html',
-  styleUrls: ['./coupon.component.scss'],
-  standalone: true,
-  imports: [SharedModule, FooterOneComponent, CountdownTimerComponent, BreadcrumbOneComponent, HeaderTwoComponent]
+    selector: 'app-coupon',
+    templateUrl: './coupon.component.html',
+    styleUrls: ['./coupon.component.scss'],
+    imports: [SharedModule, FooterOneComponent, CountdownTimerComponent, BreadcrumbOneComponent, HeaderTwoComponent]
 })
 export class CouponComponent {
   public coupons = coupon_data;

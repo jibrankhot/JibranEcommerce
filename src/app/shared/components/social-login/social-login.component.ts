@@ -5,7 +5,6 @@ import { SharedModule } from '../../../shared.module';
     selector: 'app-social-login',
     templateUrl: './social-login.component.html',
     styleUrls: ['./social-login.component.scss'],
-    standalone: true,
     imports: [SharedModule]
 })
 export class SocialLoginComponent {

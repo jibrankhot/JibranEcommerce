@@ -1,24 +1,29 @@
-import { Component, Input } from '@angular/core';
+import { Component, Input, Inject, PLATFORM_ID } from '@angular/core';
+import { isPlatformBrowser } from '@angular/common';
 import Swiper from 'swiper';
 import { Scrollbar } from 'swiper/modules';
 import { SharedModule } from '../../../shared.module';
 import { IProduct } from '../../../shared/types/product-type';
 import { ProductService } from '../../../shared/services/product.service';
 import { ProductItemThreeComponent } from "../beauty/product-item-three/product-item-three.component";
+import { DomUtilsService } from '../../../shared/services/dom-utils.service';
 
 @Component({
   selector: 'app-related-products',
   templateUrl: './related-products.component.html',
   styleUrls: ['./related-products.component.scss'],
-  standalone: true,
-  imports: [SharedModule, ProductItemThreeComponent]
+  imports: [SharedModule, ProductItemThreeComponent],
+  standalone: true
 })
 export class RelatedProductsComponent {
   @Input() productId!: string;
   @Input() category!: string;
-  public related_products: IProduct[] = []; // Replace with your product interface
+  public related_products: IProduct[] = [];
 
-  constructor(private productService: ProductService) { }
+  constructor(
+    private productService: ProductService,
+    private domUtil: DomUtilsService
+  ) { }
 
   private loadRelatedProducts() {
     if (this.productId && this.category) {
@@ -26,14 +31,18 @@ export class RelatedProductsComponent {
         .getRelatedProducts(this.productId, this.category)
         .subscribe((products) => {
           this.related_products = products;
+
+          // Initialize Swiper after data loads (optional delay)
+          this.domUtil.runInBrowser(() => {
+            setTimeout(() => {
+              this.initSwiper();
+            }, 0);
+          });
         });
     }
   }
 
-  ngOnInit(): void {
-    // loadRelatedProducts
-    this.loadRelatedProducts();
-    // swiper activated
+  private initSwiper() {
     new Swiper('.tp-product-related-slider-active', {
       slidesPerView: 4,
       spaceBetween: 24,
@@ -45,22 +54,18 @@ export class RelatedProductsComponent {
         snapOnRelease: true,
       },
       breakpoints: {
-        "1200": {
-          slidesPerView: 4,
-        },
-        "992": {
-          slidesPerView: 3,
-        },
-        "768": {
-          slidesPerView: 2,
-        },
-        "576": {
-          slidesPerView: 2,
-        },
-        "0": {
-          slidesPerView: 1,
-        },
+        "1200": { slidesPerView: 4 },
+        "992": { slidesPerView: 3 },
+        "768": { slidesPerView: 2 },
+        "576": { slidesPerView: 2 },
+        "0": { slidesPerView: 1 },
       }
+    });
+  }
+
+  ngOnInit(): void {
+    this.domUtil.runInBrowser(() => {
+      this.loadRelatedProducts();
     });
   }
 }

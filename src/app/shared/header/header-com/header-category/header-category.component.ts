@@ -4,11 +4,10 @@ import { SharedModule } from '../../../../shared.module';
 import category_data from '../../../data/category-data';
 
 @Component({
-  selector: 'app-header-category',
-  templateUrl: './header-category.component.html',
-  styleUrls: ['./header-category.component.scss'],
-  standalone: true,
-  imports: [SharedModule]
+    selector: 'app-header-category',
+    templateUrl: './header-category.component.html',
+    styleUrls: ['./header-category.component.scss'],
+    imports: [SharedModule]
 })
 export class HeaderCategoryComponent {
 

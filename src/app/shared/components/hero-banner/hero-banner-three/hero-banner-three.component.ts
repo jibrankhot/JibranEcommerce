@@ -2,12 +2,12 @@ import { Component, ElementRef, ViewChild } from '@angular/core';
 import Swiper from 'swiper';
 import { Navigation, Pagination, EffectFade } from 'swiper/modules';
 import { SharedModule } from '../../../../shared.module';
+import { DomUtilsService } from '../../../services/dom-utils.service';
 
 @Component({
   selector: 'app-hero-banner-three',
   templateUrl: './hero-banner-three.component.html',
   styleUrls: ['./hero-banner-three.component.scss'],
-  standalone: true,
   imports: [SharedModule]
 })
 export class HeroBannerThreeComponent {
@@ -15,6 +15,7 @@ export class HeroBannerThreeComponent {
   @ViewChild('swiperContainer') swiperContainer!: ElementRef;
   public swiperInstance: Swiper | undefined;
 
+  constructor(private domUtil: DomUtilsService) { }
   // slider data
   public slider_data = [
     {
@@ -38,17 +39,20 @@ export class HeroBannerThreeComponent {
   ]
 
   ngAfterViewInit() {
-    if (this.swiperContainer) {
-      this.swiperInstance = new Swiper('.tp-slider-active-3', {
-        slidesPerView: 1,
-        spaceBetween: 30,
-        effect: 'fade',
-        modules: [Pagination, EffectFade],
-        pagination: {
-          el: ".tp-slider-3-dot",
-          clickable: true
-        }
-      });
-    }
+    this.domUtil.runInBrowser(() => {
+      if (this.swiperContainer) {
+        this.swiperInstance = new Swiper('.tp-slider-active-3', {
+          slidesPerView: 1,
+          spaceBetween: 30,
+          effect: 'fade',
+          modules: [Pagination, EffectFade],
+          pagination: {
+            el: ".tp-slider-3-dot",
+            clickable: true
+          }
+        });
+      }
+    });
+
   }
 }

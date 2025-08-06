@@ -5,11 +5,10 @@ import { IProduct } from '../../../../shared/types/product-type';
 import { ProductService } from '../../../../shared/services/product.service';
 
 @Component({
-  selector: 'app-top-rated-products',
-  templateUrl: './top-rated-products.component.html',
-  styleUrls: ['./top-rated-products.component.scss'],
-  standalone: true,
-  imports: [SharedModule]
+    selector: 'app-top-rated-products',
+    templateUrl: './top-rated-products.component.html',
+    styleUrls: ['./top-rated-products.component.scss'],
+    imports: [SharedModule]
 })
 export class TopRatedProductsComponent {
 

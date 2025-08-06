@@ -6,12 +6,10 @@ import { SharedModule } from '../../../shared.module';
 import { ProductService } from '../../../shared/services/product.service';
 
 @Component({
-  selector: 'app-status-filter',
-  templateUrl: './status-filter.component.html',
-  styleUrls: ['./status-filter.component.scss'],
-  standalone: true,
-  imports: [SharedModule]
-
+    selector: 'app-status-filter',
+    templateUrl: './status-filter.component.html',
+    styleUrls: ['./status-filter.component.scss'],
+    imports: [SharedModule]
 })
 export class StatusFilterComponent {
   status: string[] = ['On sale', 'In Stock', 'Out of stock'];

@@ -10,11 +10,10 @@ import { BreadcrumbOneComponent } from "../../shared/components/breadcrumb/bread
 import { HeaderTwoComponent } from "../../shared/header/header-two/header-two.component";
 
 @Component({
-  selector: 'app-checkout',
-  templateUrl: './checkout.component.html',
-  styleUrls: ['./checkout.component.scss'],
-  standalone: true,
-  imports: [SharedModule, FooterOneComponent, NiceSelectComponent, LoginFormComponent, BreadcrumbOneComponent, HeaderTwoComponent]
+    selector: 'app-checkout',
+    templateUrl: './checkout.component.html',
+    styleUrls: ['./checkout.component.scss'],
+    imports: [SharedModule, FooterOneComponent, NiceSelectComponent, LoginFormComponent, BreadcrumbOneComponent, HeaderTwoComponent]
 })
 export class CheckoutComponent {
 

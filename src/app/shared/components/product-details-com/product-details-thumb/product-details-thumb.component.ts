@@ -5,11 +5,10 @@ import { ProductService } from '../../../services/product.service';
 import { UtilsService } from '../../../services/utils.service';
 
 @Component({
-  selector: 'app-product-details-thumb',
-  templateUrl: './product-details-thumb.component.html',
-  styleUrls: ['./product-details-thumb.component.scss'],
-  standalone: true,
-  imports: [SharedModule]
+    selector: 'app-product-details-thumb',
+    templateUrl: './product-details-thumb.component.html',
+    styleUrls: ['./product-details-thumb.component.scss'],
+    imports: [SharedModule]
 })
 export class ProductDetailsThumbComponent {
   @Input() product!: IProduct;

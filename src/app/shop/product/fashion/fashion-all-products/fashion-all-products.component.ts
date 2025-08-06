@@ -6,11 +6,10 @@ import { ProductItemTwoComponent } from "../product-item-two/product-item-two.co
 
 
 @Component({
-  selector: 'app-fashion-all-products',
-  templateUrl: './fashion-all-products.component.html',
-  styleUrls: ['./fashion-all-products.component.scss'],
-  standalone: true,
-  imports: [SharedModule, ProductItemTwoComponent]
+    selector: 'app-fashion-all-products',
+    templateUrl: './fashion-all-products.component.html',
+    styleUrls: ['./fashion-all-products.component.scss'],
+    imports: [SharedModule, ProductItemTwoComponent]
 })
 export class FashionAllProductsComponent {
   tabs: string[] = ['All Collection', 'Shoes', 'Clothing', 'Bags'];

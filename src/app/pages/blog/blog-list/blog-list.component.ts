@@ -6,11 +6,10 @@ import { BlogGridComponent } from "../blog-grid/blog-grid.component";
 
 
 @Component({
-  selector: 'app-blog-list',
-  templateUrl: './blog-list.component.html',
-  styleUrls: ['./blog-list.component.scss'],
-  standalone: true,
-  imports: [SharedModule, BlogGridComponent]
+    selector: 'app-blog-list',
+    templateUrl: './blog-list.component.html',
+    styleUrls: ['./blog-list.component.scss'],
+    imports: [SharedModule, BlogGridComponent]
 })
 export class BlogListComponent {
 

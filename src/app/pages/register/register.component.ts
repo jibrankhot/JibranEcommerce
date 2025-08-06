@@ -9,7 +9,6 @@ import { HeaderTwoComponent } from "../../shared/header/header-two/header-two.co
     selector: 'app-register',
     templateUrl: './register.component.html',
     styleUrls: ['./register.component.scss'],
-    standalone: true,
     imports: [SharedModule, FooterOneComponent, RegisterFormComponent, SocialLoginComponent, HeaderTwoComponent]
 })
 export class RegisterComponent {

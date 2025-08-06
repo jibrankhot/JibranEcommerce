@@ -5,11 +5,10 @@ import { ProductDetailsRatingItemComponent } from "../product-details-rating-ite
 import { ShopDetailsFormComponent } from "../../forms/shop-details-form/shop-details-form.component";
 
 @Component({
-  selector: 'app-product-details-tab-nav',
-  templateUrl: './product-details-tab-nav.component.html',
-  styleUrls: ['./product-details-tab-nav.component.scss'],
-  standalone: true,
-  imports: [SharedModule, ProductDetailsRatingItemComponent, ShopDetailsFormComponent]
+    selector: 'app-product-details-tab-nav',
+    templateUrl: './product-details-tab-nav.component.html',
+    styleUrls: ['./product-details-tab-nav.component.scss'],
+    imports: [SharedModule, ProductDetailsRatingItemComponent, ShopDetailsFormComponent]
 })
 export class ProductDetailsTabNavComponent {
   @ViewChild('navActive') navActive!: ElementRef;

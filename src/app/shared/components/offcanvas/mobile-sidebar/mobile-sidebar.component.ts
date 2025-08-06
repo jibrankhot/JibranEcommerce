@@ -6,11 +6,10 @@ import category_data from '../../../data/category-data';
 import { UtilsService } from '../../../services/utils.service';
 
 @Component({
-  selector: 'app-mobile-sidebar',
-  templateUrl: './mobile-sidebar.component.html',
-  styleUrls: ['./mobile-sidebar.component.scss'],
-  standalone: true,
-  imports: [SharedModule]
+    selector: 'app-mobile-sidebar',
+    templateUrl: './mobile-sidebar.component.html',
+    styleUrls: ['./mobile-sidebar.component.scss'],
+    imports: [SharedModule]
 })
 export class MobileSidebarComponent {
 

@@ -4,17 +4,19 @@ import { register } from 'swiper/element/bundle';
 import { SharedModule } from '../../shared.module';
 import { FooterOneComponent } from "../../shared/footer/footer-one/footer-one.component";
 import { HeaderTwoComponent } from "../../shared/header/header-two/header-two.component";
+import { DomUtilsService } from '../../shared/services/dom-utils.service';
 register();
 
 @Component({
   selector: 'app-about',
   templateUrl: './about.component.html',
   styleUrls: ['./about.component.scss'],
-  standalone: true,
   imports: [SharedModule, FooterOneComponent, HeaderTwoComponent]
 })
 export class AboutComponent {
-
+  constructor(
+    private domUtil: DomUtilsService
+  ) { }
 
   // history slider data
   slider_data = [
@@ -64,23 +66,26 @@ export class AboutComponent {
   slider_nav_data = [2016, 2017, 2018, 2019];
 
   ngOnInit() {
-    const swiper = new Swiper(".tp-history-nav-active", {
-      spaceBetween: 220,
-      slidesPerView: 4,
-      freeMode: true,
-      watchSlidesProgress: true,
+    this.domUtil.runInBrowser(() => {
+      const swiper = new Swiper(".tp-history-nav-active", {
+        spaceBetween: 220,
+        slidesPerView: 4,
+        freeMode: true,
+        watchSlidesProgress: true,
+      });
+      new Swiper(".tp-history-slider-active", {
+        slidesPerView: 1,
+        spaceBetween: 0,
+        effect: 'fade',
+        navigation: {
+          nextEl: '.swiper-button-next',
+          prevEl: '.swiper-button-prev',
+        },
+        thumbs: {
+          swiper: swiper,
+        },
+      });
     });
-    new Swiper(".tp-history-slider-active", {
-      slidesPerView: 1,
-      spaceBetween: 0,
-      effect: 'fade',
-      navigation: {
-        nextEl: '.swiper-button-next',
-        prevEl: '.swiper-button-prev',
-      },
-      thumbs: {
-        swiper: swiper,
-      },
-    });
+
   }
 }

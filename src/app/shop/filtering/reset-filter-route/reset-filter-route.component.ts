@@ -3,11 +3,10 @@ import { Router } from '@angular/router';
 import { SharedModule } from '../../../shared.module';
 
 @Component({
-  selector: 'app-reset-filter-route',
-  templateUrl: './reset-filter-route.component.html',
-  styleUrls: ['./reset-filter-route.component.scss'],
-  standalone: true,
-  imports: [SharedModule]
+    selector: 'app-reset-filter-route',
+    templateUrl: './reset-filter-route.component.html',
+    styleUrls: ['./reset-filter-route.component.scss'],
+    imports: [SharedModule]
 })
 export class ResetFilterRouteComponent {
 

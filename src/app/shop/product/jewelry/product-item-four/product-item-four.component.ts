@@ -6,11 +6,10 @@ import { WishlistService } from '../../../../shared/services/wishlist.service';
 import { UtilsService } from '../../../../shared/services/utils.service';
 
 @Component({
-  selector: 'app-product-item-four',
-  templateUrl: './product-item-four.component.html',
-  styleUrls: ['./product-item-four.component.scss'],
-  standalone: true,
-  imports: [SharedModule]
+    selector: 'app-product-item-four',
+    templateUrl: './product-item-four.component.html',
+    styleUrls: ['./product-item-four.component.scss'],
+    imports: [SharedModule]
 })
 export class ProductItemFourComponent {
   @Input() product!: IProduct;

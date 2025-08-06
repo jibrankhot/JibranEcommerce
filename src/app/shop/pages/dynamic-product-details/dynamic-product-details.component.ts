@@ -15,11 +15,10 @@ import { ShopDetailsBreadcrumbComponent } from "../../../shared/components/bread
 import { HeaderTwoComponent } from "../../../shared/header/header-two/header-two.component";
 
 @Component({
-  selector: 'app-dynamic-product-details',
-  templateUrl: './dynamic-product-details.component.html',
-  styleUrls: ['./dynamic-product-details.component.scss'],
-  standalone: true,
-  imports: [SharedModule, FooterOneComponent, RelatedProductsComponent, ProductDetailsTabNavComponent, ProductDetailsWrapperComponent, ProductDetailsThumbComponent, ShopDetailsBreadcrumbComponent, HeaderTwoComponent]
+    selector: 'app-dynamic-product-details',
+    templateUrl: './dynamic-product-details.component.html',
+    styleUrls: ['./dynamic-product-details.component.scss'],
+    imports: [SharedModule, FooterOneComponent, RelatedProductsComponent, ProductDetailsTabNavComponent, ProductDetailsWrapperComponent, ProductDetailsThumbComponent, ShopDetailsBreadcrumbComponent, HeaderTwoComponent]
 })
 export class DynamicProductDetailsComponent implements OnInit {
   public product: IProduct | null | undefined;

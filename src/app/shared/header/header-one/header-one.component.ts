@@ -16,7 +16,6 @@ import { HeaderTopBarComponent } from "../header-com/header-top-bar/header-top-b
   selector: 'app-header-one',
   templateUrl: './header-one.component.html',
   styleUrls: ['./header-one.component.scss'],
-  standalone: true,
   imports: [SharedModule, MobileSidebarComponent, CartSidebarComponent, MenuBarComponent, HeaderCategoryComponent, NiceSelectComponent, HeaderTopBarComponent]
 })
 export class HeaderOneComponent {

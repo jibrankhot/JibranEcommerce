@@ -15,11 +15,10 @@ import { HeaderTwoComponent } from "../../../shared/header/header-two/header-two
 
 
 @Component({
-  selector: 'app-blog',
-  templateUrl: './blog.component.html',
-  styleUrls: ['./blog.component.scss'],
-  standalone: true,
-  imports: [SharedModule, FooterOneComponent, BlogSidebarComponent, PaginationTwoComponent, BlogPostboxItemComponent, BreadcrumbTwoComponent, HeaderTwoComponent]
+    selector: 'app-blog',
+    templateUrl: './blog.component.html',
+    styleUrls: ['./blog.component.scss'],
+    imports: [SharedModule, FooterOneComponent, BlogSidebarComponent, PaginationTwoComponent, BlogPostboxItemComponent, BreadcrumbTwoComponent, HeaderTwoComponent]
 })
 export class BlogComponent {
   public blogs: IBlogType[] = [];

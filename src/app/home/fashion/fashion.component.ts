@@ -15,11 +15,10 @@ import { InstagramAreaTwoComponent } from "../../shared/components/instagram/ins
 import { FooterOneComponent } from "../../shared/footer/footer-one/footer-one.component";
 
 @Component({
-  selector: 'app-fashion',
-  templateUrl: './fashion.component.html',
-  styleUrls: ['./fashion.component.scss'],
-  standalone: true,
-  imports: [SharedModule, HeaderTwoComponent, HeroBannerTwoComponent, FashionCategoryComponent, FashionPopularProductsComponent, FashionAllProductsComponent, FashionFeaturedProductsComponent, FashionNewTrendingItemsComponent, FashionBestSellItemsComponent, FashionTestimonialComponent, FashionBlogAreaComponent, FeatureTwoComponent, InstagramAreaTwoComponent, FooterOneComponent]
+    selector: 'app-fashion',
+    templateUrl: './fashion.component.html',
+    styleUrls: ['./fashion.component.scss'],
+    imports: [SharedModule, HeaderTwoComponent, HeroBannerTwoComponent, FashionCategoryComponent, FashionPopularProductsComponent, FashionAllProductsComponent, FashionFeaturedProductsComponent, FashionNewTrendingItemsComponent, FashionBestSellItemsComponent, FashionTestimonialComponent, FashionBlogAreaComponent, FeatureTwoComponent, InstagramAreaTwoComponent, FooterOneComponent]
 })
 export class FashionComponent {
   @Input() style_2: Boolean | undefined;

@@ -9,7 +9,6 @@ import { FooterOneComponent } from "../../shared/footer/footer-one/footer-one.co
     selector: 'app-login',
     templateUrl: './login.component.html',
     styleUrls: ['./login.component.scss'],
-    standalone: true,
     imports: [SharedModule, HeaderTwoComponent, SocialLoginComponent, LoginFormComponent, FooterOneComponent]
 })
 export class LoginComponent {

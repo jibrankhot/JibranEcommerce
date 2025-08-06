@@ -23,17 +23,16 @@ import { StatusFilterComponent } from "../../filtering/status-filter/status-filt
 import { PriceFilterComponent } from '../../filtering/price-filter/price-filter.component';
 
 @Component({
-  selector: 'app-shop-load-more',
-  templateUrl: './shop-load-more.component.html',
-  styleUrls: ['./shop-load-more.component.scss'],
-  standalone: true,
-  imports: [CommonModule,
-    RouterModule,
-    FormsModule,
-    ReactiveFormsModule,
-    ProductListItemComponent, ProductItemTwoComponent, NiceSelectComponent,
-    BrandFilterComponent, ResetFilterRouteComponent, CategoryFilterComponent,
-    StatusFilterComponent, PriceFilterComponent, HeaderTwoComponent, BreadcrumbOneComponent, TopRatedProductsComponent, FooterOneComponent]
+    selector: 'app-shop-load-more',
+    templateUrl: './shop-load-more.component.html',
+    styleUrls: ['./shop-load-more.component.scss'],
+    imports: [CommonModule,
+        RouterModule,
+        FormsModule,
+        ReactiveFormsModule,
+        ProductListItemComponent, ProductItemTwoComponent, NiceSelectComponent,
+        BrandFilterComponent, ResetFilterRouteComponent, CategoryFilterComponent,
+        StatusFilterComponent, PriceFilterComponent, HeaderTwoComponent, BreadcrumbOneComponent, TopRatedProductsComponent, FooterOneComponent]
 })
 export class ShopLoadMoreComponent {
 

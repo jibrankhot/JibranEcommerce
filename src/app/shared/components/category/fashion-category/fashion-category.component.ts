@@ -4,11 +4,10 @@ import { SharedModule } from '../../../../shared.module';
 import category_data from '../../../data/category-data';
 
 @Component({
-  selector: 'app-fashion-category',
-  templateUrl: './fashion-category.component.html',
-  styleUrls: ['./fashion-category.component.scss'],
-  standalone: true,
-  imports: [SharedModule]
+    selector: 'app-fashion-category',
+    templateUrl: './fashion-category.component.html',
+    styleUrls: ['./fashion-category.component.scss'],
+    imports: [SharedModule]
 })
 export class FashionCategoryComponent {
   categoryItems = category_data.filter((c) => c.productType === "fashion");

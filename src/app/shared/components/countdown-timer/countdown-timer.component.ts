@@ -2,11 +2,10 @@ import { Component, Input } from '@angular/core';
 import { SharedModule } from '../../../shared.module';
 
 @Component({
-  selector: 'app-countdown-timer',
-  templateUrl: './countdown-timer.component.html',
-  styleUrls: ['./countdown-timer.component.scss'],
-  standalone: true,
-  imports: [SharedModule]
+    selector: 'app-countdown-timer',
+    templateUrl: './countdown-timer.component.html',
+    styleUrls: ['./countdown-timer.component.scss'],
+    imports: [SharedModule]
 })
 export class CountdownTimerComponent {
   @Input() date: string | undefined;
