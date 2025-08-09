@@ -15,7 +15,7 @@ import { CheckoutComponent } from "./checkout/checkout.component";
 import { ProfileComponent } from "./profile/profile.component";
 import { SearchComponent } from "./search/search.component";
 
-export default [
+export const pagesRoutes: Routes = [
     { path: 'contact', canActivate: [authGuard], component: ContactComponent, title: 'Contact Page' },
     { path: 'blog', canActivate: [authGuard], component: BlogComponent, title: 'Blog Page' },
     { path: 'blog-grid', canActivate: [authGuard], component: BlogGridComponent, title: 'Blog Grid Page' },
@@ -33,4 +33,4 @@ export default [
 
 
     { path: '**', redirectTo: '/notfound', pathMatch: 'full' }
-] as Routes;
+];

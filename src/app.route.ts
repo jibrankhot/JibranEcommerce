@@ -1,6 +1,6 @@
 // src/app/app.routes.ts
 import { Routes } from '@angular/router';
-import { NotFoundComponent } from './pages/not-found/not-found.component';
+import { NotFoundComponent } from './app/pages/not-found/not-found.component';
 
 export const routes: Routes = [
   {
@@ -11,17 +11,17 @@ export const routes: Routes = [
   {
     path: 'home',
     loadChildren: () =>
-      import('./home/home.routes').then((m) => m.homeRoutes)
+      import('./app/home/home.route').then((m) => m.homeRoutes)
   },
   {
     path: 'shop',
     loadChildren: () =>
-      import('./shop/shop.routes').then((m) => m.shopRoutes)
+      import('./app/shop/shop.route').then((m) => m.shopRoutes)
   },
   {
     path: 'pages',
     loadChildren: () =>
-      import('./pages/pages.routes').then((m) => m.pagesRoutes)
+      import('./app/pages/pages.route').then((m) => m.pagesRoutes)
   },
   {
     path: '**',

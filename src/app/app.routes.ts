@@ -8,18 +8,12 @@ export const routes: Routes = [
         pathMatch: 'full'
     },
 
-    { path: 'home', loadChildren: () => import('./home/home.route') },
-    { path: 'shop', loadChildren: () => import('./shop/shop.route') },
-    { path: 'pages', loadChildren: () => import('./pages/pages.route') },
-    // ,
-    // {
-    //     path: 'shop',
-    //     loadChildren: () => import('./shop/shop.module').then(m => m.ShopModule)
-    // },
-    // {
-    //     path: 'pages',
-    //     loadChildren: () => import('./pages/pages.module').then(m => m.PagesModule)
-    // },
+    { path: 'home', loadChildren: () => import('./home/home.route').then((m) => m.homeRoutes) },
+    {
+        path: 'shop', loadChildren: () => import('./shop/shop.route').then((m) => m.shopRoutes)
+    },
+    { path: 'pages', loadChildren: () => import('./pages/pages.route').then((m) => m.pagesRoutes) },
+
     {
         path: '**',
         component: NotFoundComponent

@@ -1,6 +1,5 @@
 import { Routes } from "@angular/router";
 import { authGuard } from "../shared/services/auth.guard";
-import { ShopComponent } from "./pages/shop/shop.component";
 import { ShopListComponent } from "./pages/shop-list/shop-list.component";
 import { ShopFullWidthComponent } from "./pages/shop-full-width/shop-full-width.component";
 import { ShopSixteenThousandPxComponent } from "./pages/shop-sixteen-thousand-px/shop-sixteen-thousand-px.component";
@@ -20,9 +19,10 @@ import { CartComponent } from "./pages/cart/cart.component";
 import { WishlistComponent } from "./pages/wishlist/wishlist.component";
 import { CompareComponent } from "./pages/compare/compare.component";
 import { OrderComponent } from "./pages/order/order.component";
+import { ShopComponent } from "./pages/shop/shop.component";
 
-export default [
-    { path: 'shop', canActivate: [authGuard], component: ShopComponent, title: 'Shop Page' },
+export const shopRoutes: Routes = [
+    { path: '', canActivate: [authGuard], component: ShopComponent, title: 'Shop Page' },
     { path: 'shop-list', canActivate: [authGuard], component: ShopListComponent, title: 'Shop List Page' },
     { path: 'shop-full-width', canActivate: [authGuard], component: ShopFullWidthComponent, title: 'Shop Full Width Page' },
     { path: 'shop-1600', canActivate: [authGuard], component: ShopSixteenThousandPxComponent, title: 'Shop 1600 Page' },
@@ -42,4 +42,5 @@ export default [
     { path: 'wishlist', canActivate: [authGuard], component: WishlistComponent, title: 'Shop Wishlist Page' },
     { path: 'compare', canActivate: [authGuard], component: CompareComponent, title: 'Shop Compare Page' },
     { path: 'order', canActivate: [authGuard], component: OrderComponent, title: 'Shop Order Page' },
-] as Routes;
+];
+

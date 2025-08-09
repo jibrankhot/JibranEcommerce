@@ -10,10 +10,11 @@ import { BreadcrumbOneComponent } from "../../../shared/components/breadcrumb/br
 import { HeaderTwoComponent } from "../../../shared/header/header-two/header-two.component";
 
 @Component({
-    selector: 'app-shop',
-    templateUrl: './shop.component.html',
-    styleUrls: ['./shop.component.scss'],
-    imports: [SharedModule, FooterOneComponent, ShopAreaComponent, BreadcrumbOneComponent, HeaderTwoComponent]
+  selector: 'app-shop',
+  standalone: true,
+  templateUrl: './shop.component.html',
+  styleUrls: ['./shop.component.scss'],
+  imports: [SharedModule, FooterOneComponent, ShopAreaComponent, BreadcrumbOneComponent, HeaderTwoComponent]
 })
 export class ShopComponent {
   @Input() listStyle: boolean = false;
@@ -104,7 +105,7 @@ export class ShopComponent {
     });
   }
   ngOnInit() {
-    // console.log('pagination',this.paginate)
+    console.log('jibran', this.paginate)
   }
 
   // Append filter value to Url
