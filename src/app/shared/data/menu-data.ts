@@ -1,198 +1,172 @@
 import { IMenuItem, IMobileType } from "../types/menu-d-type";
 
-export const menu_data:IMenuItem[] = [
+export const menu_data: IMenuItem[] = [
+
   {
-    id:1,
-    link:'/home/electronic',
-    title:'Home',
-    mega_menu:true,
-    home_pages:[
+    id: 1,
+    link: '/shop',
+    title: 'Mens',
+    mega_menu: true,
+    product_menus: [
       {
-        id:1,
-        title:'Electronics',
-        img:'/assets/img/menu/menu-home-1.jpg',
-        link:'/home/electronic'
+        id: 1,
+        title: 'Topwear',
+        link: '/shop/men/topwear',
+        dropdown_menus: [
+          { title: 'T-Shirts', link: '/shop/men/t-shirts' },
+          { title: 'Casual Shirts', link: '/shop/men/casual-shirts' },
+          { title: 'Formal Shirts', link: '/shop/men/formal-shirts' },
+          { title: 'Sweatshirts', link: '/shop/men/sweatshirts' },
+          { title: 'Sweaters', link: '/shop/men/sweaters' },
+          { title: 'Jackets', link: '/shop/men/jackets' },
+          { title: 'Blazers & Coats', link: '/shop/men/blazers-coats' },
+          { title: 'Suits', link: '/shop/men/suits' }
+        ]
       },
       {
-        id:2,
-        title:'Fashion',
-        img:'/assets/img/menu/menu-home-2.jpg',
-        link:'/home/fashion'
+        id: 2,
+        title: 'Bottomwear',
+        link: '/shop/men/bottomwear',
+        dropdown_menus: [
+          { title: 'Jeans', link: '/shop/men/jeans' },
+          { title: 'Casual Trousers', link: '/shop/men/casual-trousers' },
+          { title: 'Formal Trousers', link: '/shop/men/formal-trousers' },
+          { title: 'Shorts', link: '/shop/men/shorts' },
+          { title: 'Track Pants & Joggers', link: '/shop/men/track-pants' }
+        ]
       },
       {
-        id:3,
-        title:'Beauty',
-        img:'/assets/img/menu/menu-home-3.jpg',
-        link:'/home/beauty'
+        id: 3,
+        title: 'Footwear',
+        link: '/shop/men/footwear',
+        dropdown_menus: [
+          { title: 'Casual Shoes', link: '/shop/men/casual-shoes' },
+          { title: 'Sports Shoes', link: '/shop/men/sports-shoes' },
+          { title: 'Formal Shoes', link: '/shop/men/formal-shoes' },
+          { title: 'Sneakers', link: '/shop/men/sneakers' },
+          { title: 'Sandals & Floaters', link: '/shop/men/sandals-floaters' },
+          { title: 'Flip Flops', link: '/shop/men/flip-flops' },
+          { title: 'Socks', link: '/shop/men/socks' }
+        ]
+      }
+    ]
+  },
+
+  {
+    id: 2,
+    link: '/shop',
+    title: 'Women',
+    mega_menu: true,
+    product_menus: [
+      {
+        id: 1,
+        title: 'Indian & Fusion Wear',
+        link: '/shop/women/indian-fusion',
+        dropdown_menus: [
+          { title: 'Kurtas & Suits', link: '/shop/women/kurtas-suits' },
+          { title: 'Kurtis, Tunics & Tops', link: '/shop/women/kurtis-tunics' },
+          { title: 'Sarees', link: '/shop/women/sarees' },
+          { title: 'Ethnic Wear', link: '/shop/women/ethnic-wear' },
+          { title: 'Leggings, Salwars & Churidars', link: '/shop/women/leggings-salwars' },
+          { title: 'Skirts & Palazzos', link: '/shop/women/skirts-palazzos' },
+          { title: 'Dress Materials', link: '/shop/women/dress-materials' },
+          { title: 'Lehenga Cholis', link: '/shop/women/lehenga-cholis' }
+        ]
       },
       {
-        id:4,
-        title:'Jewelry',
-        img:'/assets/img/menu/menu-home-4.jpg',
-        link:'/home/jewelry'
+        id: 2,
+        title: 'Western Wear',
+        link: '/shop/women/western-wear',
+        dropdown_menus: [
+          { title: 'Dresses', link: '/shop/women/dresses' },
+          { title: 'Tops', link: '/shop/women/tops' },
+          { title: 'T-Shirts', link: '/shop/women/t-shirts' },
+          { title: 'Jeans', link: '/shop/women/jeans' },
+          { title: 'Trousers & Capris', link: '/shop/women/trousers-capris' },
+          { title: 'Shorts & Skirts', link: '/shop/women/shorts-skirts' },
+          { title: 'Sweaters & Sweatshirts', link: '/shop/women/sweaters-sweatshirts' }
+        ]
       },
+      {
+        id: 3,
+        title: 'Footwear',
+        link: '/shop/women/footwear',
+        dropdown_menus: [
+          { title: 'Flats', link: '/shop/women/flats' },
+          { title: 'Casual Shoes', link: '/shop/women/casual-shoes' },
+          { title: 'Heels', link: '/shop/women/heels' },
+          { title: 'Boots', link: '/shop/women/boots' },
+          { title: 'Sports Shoes & Floaters', link: '/shop/women/sports-shoes-floaters' }
+        ]
+      }
+    ]
+  },
+
+  {
+    id: 3,
+    link: '/shop',
+    title: 'Kids',
+    mega_menu: true,
+    product_menus: [
+      {
+        id: 1,
+        title: 'Boys Clothing',
+        link: '/shop/kids/boys-clothing',
+        dropdown_menus: [
+          { title: 'T-Shirts', link: '/shop/kids/boys-t-shirts' },
+          { title: 'Shirts', link: '/shop/kids/boys-shirts' },
+          { title: 'Jeans', link: '/shop/kids/boys-jeans' },
+          { title: 'Shorts', link: '/shop/kids/boys-shorts' },
+          { title: 'Track Pants', link: '/shop/kids/boys-track-pants' }
+        ]
+      },
+      {
+        id: 2,
+        title: 'Girls Clothing',
+        link: '/shop/kids/girls-clothing',
+        dropdown_menus: [
+          { title: 'Dresses', link: '/shop/kids/girls-dresses' },
+          { title: 'Tops', link: '/shop/kids/girls-tops' },
+          { title: 'T-Shirts', link: '/shop/kids/girls-t-shirts' },
+          { title: 'Jeans', link: '/shop/kids/girls-jeans' },
+          { title: 'Skirts & Shorts', link: '/shop/kids/girls-skirts-shorts' }
+        ]
+      },
+      {
+        id: 3,
+        title: 'Footwear',
+        link: '/shop/kids/footwear',
+        dropdown_menus: [
+          { title: 'Casual Shoes', link: '/shop/kids/casual-shoes' },
+          { title: 'Sports Shoes', link: '/shop/kids/sports-shoes' },
+          { title: 'Sandals', link: '/shop/kids/sandals' },
+          { title: 'Flip Flops', link: '/shop/kids/flip-flops' }
+        ]
+      }
     ]
   },
   {
-    id:2,
-    link:'/shop',
-    title:'Shop',
-    mega_menu:true,
-    shop_mega_menus:[
-      {
-        link:'/shop',
-        title:'Shop Pages',
-        list_menus:[
-          {title:'Grid Layout',link:'/shop'},
-          {title:'Shop Categories',link:'/shop/shop-category'},
-          {title:'List Layout',link:'/shop/shop-list'},
-          {title:'Full width Layout',link:'/shop/shop-full-width'},
-          {title:'1600px Layout',link:'/shop/shop-1600'},
-          {title:'Left Sidebar',link:'/shop'},
-          {title:'Right Sidebar',link:'/shop/shop-right-sidebar'},
-          {title:'Hidden Sidebar',link:'/shop/shop-no-sidebar'},
-        ]
-      },
-      {
-        link:'/shop',
-        title:'Features',
-        list_menus:[
-          {title:'Filter Dropdown',link:'/shop/shop-filter-dropdown'},
-          {title:'Filters Offcanvas',link:'/shop/shop-filter-offcanvas'},
-          {title:'Filters Sidebar',link:'/shop'},
-          {title:'Load More button',link:'/shop/shop-load-more'},
-          {title:'1600px Layout',link:'/shop/shop-1600'},
-          {title:'Collections list',link:'/shop/shop-list'},
-          {title:'Hidden search',link:'/shop'},
-          {title:'Search Full screen',link:'/shop'},
-        ]
-      },
-      {
-        link:'/shop',
-        title:'Hover Style',
-        list_menus:[
-          {title:'Hover Style 1',link:'/shop'},
-          {title:'Hover Style 2',link:'/shop'},
-          {title:'Hover Style 3',link:'/shop'},
-          {title:'Hover Style 4',link:'/shop'}
-        ]
-      },
-    ]
+    id: 4,
+    link: '/pages/contact',
+    title: 'Contact',
+    mega_menu: false,
   },
-  {
-    id:3,
-    link:'/shop',
-    title:'Products',
-    mega_menu:true,
-    product_menus:[
-      {
-        id:1,
-        title:'Shop Page',
-        link:'/shop',
-        dropdown_menus:[
-          {title:'Only Categories',link:'/shop/shop-category'},
-          {title:'Shop Grid with Sidebar',link:'/shop/shop-filter-offcanvas'},
-          {title:'Shop Grid',link:'/shop'},
-          {title:'Categories',link:'/shop/shop-category'},
-          {title:'Shop List',link:'/shop/shop-list'},
-          {title:'Product Details',link:'/shop/shop-details'},
-        ]
-      },
-      {
-        id:2,
-        title:'Products',
-        link:'/shop',
-        dropdown_menus:[
-          {title:'Product Simple',link:'/shop/shop-details'},
-          {title:'With Video',link:'/shop/shop-details-with-video'},
-          {title:'With Countdown Timer',link:'/shop/shop-details-with-countdown'},
-          {title:'Variations Swatches',link:'/shop/shop-details'},
-          {title:'List View',link:'/shop/shop-details-list'},
-          {title:'Details Gallery',link:'/shop/shop-details-gallery'}
-        ]
-      },
-      {
-        id:3,
-        title:'eCommerce',
-        link:'/shop',
-        dropdown_menus:[
-          {title:'Shopping Cart',link:'/shop/cart'},
-          {title:'Track Your Order',link:'/shop/order'},
-          {title:'Compare',link:'/shop/compare'},
-          {title:'Wishlist',link:'/shop/wishlist'},
-          {title:'Checkout',link:'/pages/checkout'},
-          {title:'My account',link:'/pages/profile'}
-        ]
-      },
-      {
-        id:4,
-        title:'More Pages',
-        link:'/shop',
-        dropdown_menus:[
-          {title:'About',link:'/pages/about'},
-          {title:'Login',link:'/pages/login'},
-          {title:'Register',link:'/pages/register'},
-          {title:'Forgot Password',link:'/pages/forgot'},
-          {title:'404 Error',link:'/pages/404'}
-        ]
-      },
-    ]
-  },
-  {
-    id:4,
-    link:'/pages/coupons',
-    title:'Coupons',
-  },
-  {
-    id:5,
-    link:'/pages/blog',
-    title:'Blog',
-    drop_down:true,
-    dropdown_menus:[
-      {title:'Blog Standard',link:'/pages/blog'},
-      {title:'Blog Grid',link:'/pages/blog-grid'},
-      {title:'Blog List',link:'/pages/blog-list'},
-      {title:'Blog Details',link:'/pages/blog-details'},
-    ]
-  },
-  {
-    id:5,
-    link:'/pages/contact',
-    title:'Contact',
-  },
+
 ]
 
 // mobile menu data
-export const mobile_menu:IMobileType[] = [
+export const mobile_menu: IMobileType[] = [
   {
     id: 1,
     homes: true,
     title: 'Home',
-    link: '/home/electronic',
+    link: '/home/fashion',
     home_pages: [
       {
-        id:1,
-        title:'Electronics',
-        img:'/assets/img/menu/menu-home-1.jpg',
-        link:'/home/electronic'
-      },
-      {
-        id:2,
-        title:'Fashion',
-        img:'/assets/img/menu/menu-home-2.jpg',
-        link:'/home/fashion'
-      },
-      {
-        id:3,
-        title:'Beauty',
-        img:'/assets/img/menu/menu-home-3.jpg',
-        link:'/home/beauty'
-      },
-      {
-        id:4,
-        title:'Jewelry',
-        img:'/assets/img/menu/menu-home-4.jpg',
-        link:'/home/jewelry'
+        id: 2,
+        title: 'Fashion',
+        img: '/assets/img/menu/menu-home-2.jpg',
+        link: '/home/fashion'
       }
     ]
   },
@@ -202,18 +176,18 @@ export const mobile_menu:IMobileType[] = [
     title: 'Products',
     link: '/shop',
     sub_menus: [
-      {title:'Grid Layout',link:'/shop'},
-      {title:'Shop Categories',link:'/shop/shop-category'},
-      {title:'List Layout',link:'/shop/shop-list'},
-      {title:'Full width Layout',link:'/shop/shop-full-width'},
-      {title:'1600px Layout',link:'/shop/shop-1600'},
-      {title:'Left Sidebar',link:'/shop'},
-      {title:'Right Sidebar',link:'/shop/shop-right-sidebar'},
-      {title:'Hidden Sidebar',link:'/shop/shop-no-sidebar'},
-      {title:'Filter Dropdown',link:'/shop/shop-filter-dropdown'},
-      {title:'Filters Offcanvas',link:'/shop/shop-filter-offcanvas'},
-      {title:'Load More button',link:'/shop/shop-load-more'},
-      {title:'1600px Layout',link:'/shop/shop-1600'},
+      { title: 'Grid Layout', link: '/shop' },
+      { title: 'Shop Categories', link: '/shop/shop-category' },
+      { title: 'List Layout', link: '/shop/shop-list' },
+      { title: 'Full width Layout', link: '/shop/shop-full-width' },
+      { title: '1600px Layout', link: '/shop/shop-1600' },
+      { title: 'Left Sidebar', link: '/shop' },
+      { title: 'Right Sidebar', link: '/shop/shop-right-sidebar' },
+      { title: 'Hidden Sidebar', link: '/shop/shop-no-sidebar' },
+      { title: 'Filter Dropdown', link: '/shop/shop-filter-dropdown' },
+      { title: 'Filters Offcanvas', link: '/shop/shop-filter-offcanvas' },
+      { title: 'Load More button', link: '/shop/shop-load-more' },
+      { title: '1600px Layout', link: '/shop/shop-1600' },
     ],
   },
   {
@@ -222,12 +196,12 @@ export const mobile_menu:IMobileType[] = [
     title: 'Products Details',
     link: '/shop/shop-details',
     sub_menus: [
-      {title:'Product Simple',link:'/shop/shop-details'},
-      {title:'With Video',link:'/shop/shop-details-with-video'},
-      {title:'With Countdown Timer',link:'/shop/shop-details-with-countdown'},
-      {title:'Variations Swatches',link:'/shop/shop-details'},
-      {title:'List View',link:'/shop/shop-details-list'},
-      {title:'Details Gallery',link:'/shop/shop-details-gallery'}
+      { title: 'Product Simple', link: '/shop/shop-details' },
+      { title: 'With Video', link: '/shop/shop-details-with-video' },
+      { title: 'With Countdown Timer', link: '/shop/shop-details-with-countdown' },
+      { title: 'Variations Swatches', link: '/shop/shop-details' },
+      { title: 'List View', link: '/shop/shop-details-list' },
+      { title: 'Details Gallery', link: '/shop/shop-details-gallery' }
     ],
   },
   {
@@ -236,12 +210,12 @@ export const mobile_menu:IMobileType[] = [
     title: 'eCommerce',
     link: '/shop/cart',
     sub_menus: [
-      {title:'Shopping Cart',link:'/shop/cart'},
-      {title:'Track Your Order',link:'/shop/order'},
-      {title:'Compare',link:'/shop/compare'},
-      {title:'Wishlist',link:'/shop/wishlist'},
-      {title:'Checkout',link:'/pages/checkout'},
-      {title:'My account',link:'/pages/profile'}
+      { title: 'Shopping Cart', link: '/shop/cart' },
+      { title: 'Track Your Order', link: '/shop/order' },
+      { title: 'Compare', link: '/shop/compare' },
+      { title: 'Wishlist', link: '/shop/wishlist' },
+      { title: 'Checkout', link: '/pages/checkout' },
+      { title: 'My account', link: '/pages/profile' }
     ],
   },
   {
@@ -250,30 +224,12 @@ export const mobile_menu:IMobileType[] = [
     title: 'More Pages',
     link: '/login',
     sub_menus: [
-      {title:'About',link:'/pages/about'},
-      {title:'Login',link:'/pages/login'},
-      {title:'Register',link:'/pages/register'},
-      {title:'Forgot Password',link:'/pages/forgot'},
-      {title:'404 Error',link:'/pages/404'}
+      { title: 'About', link: '/pages/about' },
+      { title: 'Login', link: '/pages/login' },
+      { title: 'Register', link: '/pages/register' },
+      { title: 'Forgot Password', link: '/pages/forgot' },
+      { title: '404 Error', link: '/pages/404' }
     ],
-  },
-  {
-    id: 6,
-    single_link: true,
-    title: 'Coupons',
-    link: '/pages/coupons',
-  },
-  {
-    id: 7,
-    sub_menu: true,
-    title: 'Blog',
-    link: '/pages/blog',
-    sub_menus: [
-      {title:'Blog Standard',link:'/pages/blog'},
-      {title:'Blog Grid',link:'/pages/blog-grid'},
-      {title:'Blog List',link:'/pages/blog-list'},
-      {title:'Blog Details',link:'/pages/blog-details'}
-    ]
   },
   {
     id: 8,
@@ -282,3 +238,5 @@ export const mobile_menu:IMobileType[] = [
     link: '/pages/contact',
   },
 ]
+
+

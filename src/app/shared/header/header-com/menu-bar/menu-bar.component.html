@@ -1,6 +1,11 @@
-<ul>
-  <li *ngFor="let item of menu_data; let i = index" [ngClass]="{'has-dropdown': item.drop_down, 'has-dropdown has-mega-menu': item.mega_menu}">
-    <a [routerLink]="item.link">{{ item.title }}</a>
+<ul class="main-menu">
+  <li *ngFor="let item of menu_data; let i = index"
+    [ngClass]="{'has-dropdown': item.drop_down && !item.mega_menu, 'has-mega-menu': item.mega_menu}">
+    <a [routerLink]="item.link">
+      {{ item.title }}
+      <span *ngIf="item.drop_down || item.mega_menu" class="dropdown-arrow">▼</span>
+    </a>
+
     <div *ngIf="item.home_pages" class="home-menu tp-submenu tp-mega-menu">
       <div class="row row-cols-1 row-cols-lg-4 row-cols-xl-4">
         <div *ngFor="let home of item.home_pages; let i = index" class="col">
@@ -19,7 +24,7 @@
     </div>
 
     <div *ngIf="item.shop_mega_menus" class="shop-mega-menu tp-submenu tp-mega-menu">
-      <div class="row">
+      <div class="row gx-2">
         <div *ngFor="let shop_m of item.shop_mega_menus; let i = index" class="col-lg-2">
           <div class="shop-mega-menu-list">
             <a [routerLink]="shop_m.link" class="shop-mega-menu-title">{{ shop_m.title }}</a>
@@ -30,11 +35,14 @@
             </ul>
           </div>
         </div>
+
         <div class="col-lg-3">
           <div class="shop-mega-menu-img">
             <img src="/assets/img/menu/product/menu-product-img-1.jpg" alt="" />
             <div class="shop-mega-menu-btn">
-              <a routerLink="/shop?category=mobile-tablets" class="tp-menu-showcase-btn tp-menu-showcase-btn-2">Phones</a>
+              <a routerLink="/shop?category=mobile-tablets" class="tp-menu-showcase-btn tp-menu-showcase-btn-2">
+                Phones
+              </a>
             </div>
           </div>
         </div>
@@ -42,7 +50,9 @@
           <div class="shop-mega-menu-img">
             <img src="/assets/img/menu/product/menu-product-img-2.jpg" alt="" />
             <div class="shop-mega-menu-btn">
-              <a routerLink="/shop?category=headphones" class="tp-menu-showcase-btn tp-menu-showcase-btn-2">Headphones</a>
+              <a routerLink="/shop?category=headphones" class="tp-menu-showcase-btn tp-menu-showcase-btn-2">
+                Headphones
+              </a>
             </div>
           </div>
         </div>
@@ -51,7 +61,11 @@
 
     <ul *ngIf="item.product_menus" class="tp-submenu tp-mega-menu mega-menu-style-2">
       <li *ngFor="let prd_m of item.product_menus; let i = index" class="has-dropdown">
-        <a routerLink="/shop" class="mega-menu-title">Shop Page</a>
+        <a [routerLink]="prd_m.link" class="mega-menu-title">
+          {{ prd_m.title }}
+          <span *ngIf="prd_m.dropdown_menus?.length" class="dropdown-arrow">▼</span>
+        </a>
+
         <ul class="tp-submenu">
           <li *ngFor="let prd_sm of prd_m.dropdown_menus; let i = index">
             <a [routerLink]="prd_sm.link">{{ prd_sm.title }}</a>
@@ -60,7 +74,7 @@
       </li>
     </ul>
 
-    <ul *ngIf="item.drop_down" class="tp-submenu">
+    <ul *ngIf="item.drop_down && !item.mega_menu" class="tp-submenu">
       <li *ngFor="let drop_m of item.dropdown_menus; let i = index">
         <a [routerLink]="drop_m.link">{{ drop_m.title }}</a>
       </li>

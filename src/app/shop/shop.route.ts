@@ -22,7 +22,7 @@ import { OrderComponent } from "./pages/order/order.component";
 import { ShopComponent } from "./pages/shop/shop.component";
 
 export const shopRoutes: Routes = [
-    { path: '', canActivate: [authGuard], component: ShopComponent, title: 'Shop Page' },
+    { path: '', canActivate: [authGuard], component: ShopFilterDropdownComponent, title: 'Shop Page' },
     { path: 'shop-list', canActivate: [authGuard], component: ShopListComponent, title: 'Shop List Page' },
     { path: 'shop-full-width', canActivate: [authGuard], component: ShopFullWidthComponent, title: 'Shop Full Width Page' },
     { path: 'shop-1600', canActivate: [authGuard], component: ShopSixteenThousandPxComponent, title: 'Shop 1600 Page' },
