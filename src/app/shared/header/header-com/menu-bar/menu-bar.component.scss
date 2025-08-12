@@ -12,7 +12,6 @@
       color: #3b3b3b;
       padding: 6px 0;
       text-transform: capitalize;
-      transition: color 0.3s ease;
       display: inline-flex;
       align-items: center;
       line-height: 1;
@@ -33,39 +32,40 @@
 .dropdown-arrow {
   font-size: 0.7em;
   margin-left: 6px;
-  transition: transform 0.3s ease;
   display: inline-block;
   vertical-align: middle;
   color: #ff3f6c;
   user-select: none;
 }
 
-.main-menu > li:hover > a .dropdown-arrow {
-  transform: rotate(180deg);
-}
-
-/* Fixed mega menu aligned to hovered item */
 .tp-submenu.tp-mega-menu {
   position: fixed;
-  left: auto; /* reset default left */
-  top: 60px; /* adjust based on your header height */
+  left: auto;
+  top: 38px;
   background: #fff;
   box-shadow: 0 6px 12px rgba(0, 0, 0, 0.12);
-  padding: 25px 30px;
   display: grid;
-  grid-template-columns: repeat(5, minmax(220px, 1fr));
-  gap: 15px;
+  grid-auto-flow: column;
+  grid-auto-columns: min-content;
+  column-gap: 0; /* Tight columns like Myntra */
   opacity: 0;
   visibility: hidden;
-  transition: none;
   z-index: 1000;
-  min-width: 1000px;
-  max-width: 1200px;
   border-radius: 6px;
   pointer-events: none;
+  overflow: hidden; /* Makes alternate shading full height */
+
+  /* Alternate shading effect */
+  > *:nth-child(even) {
+    background-color: #fafafa;
+  }
+
+  > * {
+    padding: 20px 24px;
+    min-width: 160px;
+  }
 }
 
-/* Show and align to hovered menu item */
 .main-menu > li:hover > .tp-submenu.tp-mega-menu {
   left: 80px;
   opacity: 1;
@@ -76,39 +76,36 @@
 .shop-mega-menu-list,
 .mega-menu-style-2 > li {
   flex: none;
-  padding: 0 20px;
-  min-width: 210px;
+  padding: 0;
+  min-width: 140px;
+}
 
-  &:nth-child(odd) {
-    background-color: #f8f8f8;
-  }
+/* Stronger selector so heading color can't be overridden */
+.tp-submenu.tp-mega-menu .shop-mega-menu-title,
+.tp-submenu.tp-mega-menu .mega-menu-title {
+  font-size: 14px;
+  font-weight: 700;
+  color: #ff3f6c !important; /* Forced pink */
+  text-transform: uppercase;
+  margin-bottom: 8px;
+  line-height: 1.2;
+  display: block;
+}
 
-  .shop-mega-menu-title,
-  .mega-menu-title {
-    font-size: 14px;
-    font-weight: 700;
+.tp-submenu.tp-mega-menu ul {
+  margin: 0;
+  padding: 0;
+}
+
+.tp-submenu.tp-mega-menu li a {
+  display: block;
+  font-size: 13px;
+  color: #4a4a4a;
+  margin-bottom: 6px;
+  line-height: 1.4;
+
+  &:hover {
     color: #ff3f6c;
-    margin-bottom: 6px;
-    line-height: 1;
-    display: block;
-  }
-
-  ul {
-    margin: 0;
-    padding: 0;
-
-    li a {
-      display: block;
-      font-size: 13px;
-      color: #4a4a4a;
-      margin-bottom: 4px;
-      line-height: 1.3;
-      transition: color 0.2s ease;
-
-      &:hover {
-        color: #ff3f6c;
-      }
-    }
   }
 }
 

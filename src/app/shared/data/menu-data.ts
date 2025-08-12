@@ -81,47 +81,6 @@ export const menu_data: IMenuItem[] = [
           { title: 'Sunglasses', link: '/shop/men/sunglasses' },
           { title: 'Phone Cases', link: '/shop/men/phone-cases' }
         ]
-      },
-      {
-        id: 7,
-        title: 'Grooming',
-        link: '/shop/men/grooming',
-        dropdown_menus: [
-          { title: 'Trimmers', link: '/shop/men/trimmers' },
-          { title: 'Shaving', link: '/shop/men/shaving' },
-          { title: 'Fragrances', link: '/shop/men/fragrances' },
-          { title: 'Skincare', link: '/shop/men/skincare' }
-        ]
-      },
-      {
-        id: 8,
-        title: 'Watches',
-        link: '/shop/men/watches',
-        dropdown_menus: [
-          { title: 'Analog', link: '/shop/men/watches/analog' },
-          { title: 'Digital', link: '/shop/men/watches/digital' },
-          { title: 'Smart Watches', link: '/shop/men/watches/smart' }
-        ]
-      },
-      {
-        id: 9,
-        title: 'Ethnic Wear',
-        link: '/shop/men/ethnic-wear',
-        dropdown_menus: [
-          { title: 'Kurtas', link: '/shop/men/kurtas' },
-          { title: 'Sherwanis', link: '/shop/men/sherwanis' },
-          { title: 'Nehru Jackets', link: '/shop/men/nehru-jackets' }
-        ]
-      },
-      {
-        id: 10,
-        title: 'Plus Size',
-        link: '/shop/men/plus-size',
-        dropdown_menus: [
-          { title: 'T-Shirts', link: '/shop/men/plus-size/t-shirts' },
-          { title: 'Shirts', link: '/shop/men/plus-size/shirts' },
-          { title: 'Bottomwear', link: '/shop/men/plus-size/bottomwear' }
-        ]
       }
     ]
   },
@@ -204,27 +163,6 @@ export const menu_data: IMenuItem[] = [
           { title: 'Jewellery', link: '/shop/women/jewellery' },
           { title: 'Sunglasses', link: '/shop/women/sunglasses' },
           { title: 'Hair Accessories', link: '/shop/women/hair-accessories' }
-        ]
-      },
-      {
-        id: 7,
-        title: 'Beauty & Personal Care',
-        link: '/shop/women/beauty-personal-care',
-        dropdown_menus: [
-          { title: 'Makeup', link: '/shop/women/makeup' },
-          { title: 'Skincare', link: '/shop/women/skincare' },
-          { title: 'Hair Care', link: '/shop/women/hair-care' },
-          { title: 'Fragrances', link: '/shop/women/fragrances' }
-        ]
-      },
-      {
-        id: 8,
-        title: 'Watches & Wearables',
-        link: '/shop/women/watches-wearables',
-        dropdown_menus: [
-          { title: 'Watches', link: '/shop/women/watches' },
-          { title: 'Smart Watches', link: '/shop/women/smart-watches' },
-          { title: 'Fitness Bands', link: '/shop/women/fitness-bands' }
         ]
       }
     ]
