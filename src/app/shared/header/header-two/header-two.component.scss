@@ -1,21 +1,106 @@
-.shop-category-title {
-  font-weight: 500;
-  font-size: 13px;
-  margin-right: 15px;
-  text-transform: capitalize; 
-  letter-spacing: 0.3px;
-  color: #666;
-
-  white-space: nowrap;   
-  flex-shrink: 0;        
-}
-
-.tp-main-menu-content {
+.header-full-width {
+  width: 100%;
   display: flex;
   align-items: center;
-
-  > app-menu-bar {
-    flex-grow: 1;      
-    min-width: 0;      
-  }
+  background: inherit;
 }
+
+/* Logo fully left */
+.logo {
+  flex-shrink: 0;
+  padding-left: 12px;
+}
+.logo img {
+  max-height: 45px;
+}
+
+/* Main menu styling */
+.tp-main-menu-content {
+  flex: 1;
+  margin-left: 30px;
+}
+
+/* Remove dropdown arrows */
+.tp-main-menu-content ul li > a::after {
+  content: none !important;
+  display: none !important;
+}
+.tp-main-menu-content ul li > a > svg,
+.tp-main-menu-content ul li > a > i,
+.tp-main-menu-content ul li > a > span.arrow {
+  display: none !important;
+}
+
+/* Remove shop-category-title completely */
+.shop-category-title {
+  display: none !important;
+}
+
+/* Right section styling */
+.tp-header-bottom-right {
+  margin-left: auto !important;
+  display: flex !important;
+  align-items: center;
+  gap: 15px;
+  padding-left: 0;
+}
+
+/* Force all action items visible */
+.tp-header-action-item {
+  display: flex !important;
+  position: relative;
+}
+
+/* Override Bootstrap hiding if present */
+.tp-header-action-item.d-none.d-lg-flex,
+.tp-header-action-item.d-none.d-lg-block {
+  display: flex !important;
+}
+
+.tp-header-action-btn {
+  font-size: 20px;
+  color: #282c3f;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Badges */
+.tp-header-action-badge {
+  position: absolute;
+  top: -6px;
+  right: -8px;
+  background: #ff3f6c;
+  color: #fff;
+  font-size: 11px;
+  font-weight: 500;
+  border-radius: 50%;
+  padding: 2px 6px;
+  line-height: 1;
+}
+
+/* Search bar */
+.tp-header-search-2 {
+  margin-right: 10px;
+}
+.tp-header-search-2 form {
+  display: flex;
+  align-items: center;
+}
+.tp-header-search-2 input {
+  width: 280px;
+  padding: 8px 12px;
+  border: 1px solid #eaeaec;
+  border-right: none;
+  border-radius: 4px 0 0 4px;
+  font-size: 14px;
+}
+.tp-header-search-2 button {
+  border: 1px solid #eaeaec;
+  border-left: none;
+  background: #f5f5f6;
+  padding: 8px 12px;
+  border-radius: 0 4px 4px 0;
+  cursor: pointer;
+}
+

@@ -1,11 +1,11 @@
 import { IMenuItem, IMobileType } from "../types/menu-d-type";
 
 export const menu_data: IMenuItem[] = [
-
+  // Men
   {
     id: 1,
-    link: '/shop',
-    title: 'Mens',
+    link: '/shop/men',
+    title: 'Men',
     mega_menu: true,
     product_menus: [
       {
@@ -48,13 +48,88 @@ export const menu_data: IMenuItem[] = [
           { title: 'Flip Flops', link: '/shop/men/flip-flops' },
           { title: 'Socks', link: '/shop/men/socks' }
         ]
+      },
+      {
+        id: 4,
+        title: 'Sportswear',
+        link: '/shop/men/sportswear',
+        dropdown_menus: [
+          { title: 'Track Pants & Shorts', link: '/shop/men/track-pants-shorts' },
+          { title: 'T-Shirts', link: '/shop/men/sports-t-shirts' },
+          { title: 'Jackets', link: '/shop/men/sports-jackets' }
+        ]
+      },
+      {
+        id: 5,
+        title: 'Innerwear & Sleepwear',
+        link: '/shop/men/innerwear-sleepwear',
+        dropdown_menus: [
+          { title: 'Briefs & Trunks', link: '/shop/men/briefs-trunks' },
+          { title: 'Vests', link: '/shop/men/vests' },
+          { title: 'Sleepwear & Lounge', link: '/shop/men/sleepwear-lounge' }
+        ]
+      },
+      {
+        id: 6,
+        title: 'Accessories',
+        link: '/shop/men/accessories',
+        dropdown_menus: [
+          { title: 'Wallets', link: '/shop/men/wallets' },
+          { title: 'Belts', link: '/shop/men/belts' },
+          { title: 'Caps & Hats', link: '/shop/men/caps-hats' },
+          { title: 'Jewellery', link: '/shop/men/jewellery' },
+          { title: 'Sunglasses', link: '/shop/men/sunglasses' },
+          { title: 'Phone Cases', link: '/shop/men/phone-cases' }
+        ]
+      },
+      {
+        id: 7,
+        title: 'Grooming',
+        link: '/shop/men/grooming',
+        dropdown_menus: [
+          { title: 'Trimmers', link: '/shop/men/trimmers' },
+          { title: 'Shaving', link: '/shop/men/shaving' },
+          { title: 'Fragrances', link: '/shop/men/fragrances' },
+          { title: 'Skincare', link: '/shop/men/skincare' }
+        ]
+      },
+      {
+        id: 8,
+        title: 'Watches',
+        link: '/shop/men/watches',
+        dropdown_menus: [
+          { title: 'Analog', link: '/shop/men/watches/analog' },
+          { title: 'Digital', link: '/shop/men/watches/digital' },
+          { title: 'Smart Watches', link: '/shop/men/watches/smart' }
+        ]
+      },
+      {
+        id: 9,
+        title: 'Ethnic Wear',
+        link: '/shop/men/ethnic-wear',
+        dropdown_menus: [
+          { title: 'Kurtas', link: '/shop/men/kurtas' },
+          { title: 'Sherwanis', link: '/shop/men/sherwanis' },
+          { title: 'Nehru Jackets', link: '/shop/men/nehru-jackets' }
+        ]
+      },
+      {
+        id: 10,
+        title: 'Plus Size',
+        link: '/shop/men/plus-size',
+        dropdown_menus: [
+          { title: 'T-Shirts', link: '/shop/men/plus-size/t-shirts' },
+          { title: 'Shirts', link: '/shop/men/plus-size/shirts' },
+          { title: 'Bottomwear', link: '/shop/men/plus-size/bottomwear' }
+        ]
       }
     ]
   },
 
+  // Women
   {
     id: 2,
-    link: '/shop',
+    link: '/shop/women',
     title: 'Women',
     mega_menu: true,
     product_menus: [
@@ -98,13 +173,67 @@ export const menu_data: IMenuItem[] = [
           { title: 'Boots', link: '/shop/women/boots' },
           { title: 'Sports Shoes & Floaters', link: '/shop/women/sports-shoes-floaters' }
         ]
+      },
+      {
+        id: 4,
+        title: 'Lingerie & Sleepwear',
+        link: '/shop/women/lingerie-sleepwear',
+        dropdown_menus: [
+          { title: 'Bra', link: '/shop/women/bra' },
+          { title: 'Briefs & Panties', link: '/shop/women/briefs-panties' },
+          { title: 'Sleepwear & Loungewear', link: '/shop/women/sleepwear-loungewear' }
+        ]
+      },
+      {
+        id: 5,
+        title: 'Sports & Activewear',
+        link: '/shop/women/sports-activewear',
+        dropdown_menus: [
+          { title: 'Track Pants & Shorts', link: '/shop/women/track-pants-shorts' },
+          { title: 'T-Shirts', link: '/shop/women/sports-t-shirts' },
+          { title: 'Jackets', link: '/shop/women/sports-jackets' }
+        ]
+      },
+      {
+        id: 6,
+        title: 'Accessories',
+        link: '/shop/women/accessories',
+        dropdown_menus: [
+          { title: 'Bags & Wallets', link: '/shop/women/bags-wallets' },
+          { title: 'Belts', link: '/shop/women/belts' },
+          { title: 'Jewellery', link: '/shop/women/jewellery' },
+          { title: 'Sunglasses', link: '/shop/women/sunglasses' },
+          { title: 'Hair Accessories', link: '/shop/women/hair-accessories' }
+        ]
+      },
+      {
+        id: 7,
+        title: 'Beauty & Personal Care',
+        link: '/shop/women/beauty-personal-care',
+        dropdown_menus: [
+          { title: 'Makeup', link: '/shop/women/makeup' },
+          { title: 'Skincare', link: '/shop/women/skincare' },
+          { title: 'Hair Care', link: '/shop/women/hair-care' },
+          { title: 'Fragrances', link: '/shop/women/fragrances' }
+        ]
+      },
+      {
+        id: 8,
+        title: 'Watches & Wearables',
+        link: '/shop/women/watches-wearables',
+        dropdown_menus: [
+          { title: 'Watches', link: '/shop/women/watches' },
+          { title: 'Smart Watches', link: '/shop/women/smart-watches' },
+          { title: 'Fitness Bands', link: '/shop/women/fitness-bands' }
+        ]
       }
     ]
   },
 
+  // Kids
   {
     id: 3,
-    link: '/shop',
+    link: '/shop/kids',
     title: 'Kids',
     mega_menu: true,
     product_menus: [
@@ -142,17 +271,110 @@ export const menu_data: IMenuItem[] = [
           { title: 'Sandals', link: '/shop/kids/sandals' },
           { title: 'Flip Flops', link: '/shop/kids/flip-flops' }
         ]
+      },
+      {
+        id: 4,
+        title: 'Accessories',
+        link: '/shop/kids/accessories',
+        dropdown_menus: [
+          { title: 'Bags & Backpacks', link: '/shop/kids/bags-backpacks' },
+          { title: 'Hats & Caps', link: '/shop/kids/hats-caps' },
+          { title: 'Watches', link: '/shop/kids/watches' }
+        ]
       }
     ]
   },
+
+  // Beauty
   {
-    id: 4,
-    link: '/pages/contact',
-    title: 'Contact',
-    mega_menu: false,
+    id: 5,
+    link: '/beauty',
+    title: 'Beauty',
+    mega_menu: true,
+    product_menus: [
+      {
+        id: 1,
+        title: 'Makeup',
+        link: '/beauty/makeup',
+        dropdown_menus: [
+          { title: 'Face Makeup', link: '/beauty/makeup/face' },
+          { title: 'Eye Makeup', link: '/beauty/makeup/eye' },
+          { title: 'Lipsticks', link: '/beauty/makeup/lipsticks' },
+          { title: 'Nail Polish', link: '/beauty/makeup/nail-polish' }
+        ]
+      },
+      {
+        id: 2,
+        title: 'Skincare',
+        link: '/beauty/skincare',
+        dropdown_menus: [
+          { title: 'Cleansers', link: '/beauty/skincare/cleansers' },
+          { title: 'Moisturizers', link: '/beauty/skincare/moisturizers' },
+          { title: 'Masks & Peels', link: '/beauty/skincare/masks-peels' }
+        ]
+      },
+      {
+        id: 3,
+        title: 'Hair Care',
+        link: '/beauty/hair-care',
+        dropdown_menus: [
+          { title: 'Shampoo', link: '/beauty/hair-care/shampoo' },
+          { title: 'Conditioner', link: '/beauty/hair-care/conditioner' },
+          { title: 'Hair Treatments', link: '/beauty/hair-care/treatments' }
+        ]
+      },
+      {
+        id: 4,
+        title: 'Fragrances',
+        link: '/beauty/fragrances',
+        dropdown_menus: [
+          { title: 'Perfumes', link: '/beauty/fragrances/perfumes' },
+          { title: 'Deodorants', link: '/beauty/fragrances/deodorants' }
+        ]
+      }
+    ]
   },
 
-]
+  // GenZ
+  {
+    id: 6,
+    link: '/genz',
+    title: 'GenZ',
+    mega_menu: true,
+    product_menus: [
+      {
+        id: 1,
+        title: 'Clothing',
+        link: '/genz/clothing',
+        dropdown_menus: [
+          { title: 'Graphic T-Shirts', link: '/genz/clothing/graphic-tshirts' },
+          { title: 'Hoodies & Sweatshirts', link: '/genz/clothing/hoodies' },
+          { title: 'Jeans & Pants', link: '/genz/clothing/jeans-pants' }
+        ]
+      },
+      {
+        id: 2,
+        title: 'Accessories',
+        link: '/genz/accessories',
+        dropdown_menus: [
+          { title: 'Backpacks', link: '/genz/accessories/backpacks' },
+          { title: 'Caps & Hats', link: '/genz/accessories/caps-hats' },
+          { title: 'Phone Cases', link: '/genz/accessories/phone-cases' }
+        ]
+      },
+      {
+        id: 3,
+        title: 'Footwear',
+        link: '/genz/footwear',
+        dropdown_menus: [
+          { title: 'Sneakers', link: '/genz/footwear/sneakers' },
+          { title: 'Sandals', link: '/genz/footwear/sandals' }
+        ]
+      }
+    ]
+  },
+];
+
 
 // mobile menu data
 export const mobile_menu: IMobileType[] = [
