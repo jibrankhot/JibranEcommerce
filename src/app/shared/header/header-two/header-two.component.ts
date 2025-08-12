@@ -5,7 +5,6 @@ import { SharedModule } from '../../../shared.module';
 import { CartService } from '../../services/cart.service';
 import { WishlistService } from '../../services/wishlist.service';
 import { UtilsService } from '../../services/utils.service';
-import { HeaderTopBarComponent } from "../header-com/header-top-bar/header-top-bar.component";
 import { MenuBarComponent } from "../header-com/menu-bar/menu-bar.component";
 import { CartSidebarComponent } from "../../components/offcanvas/cart-sidebar/cart-sidebar.component";
 import { MobileSidebarComponent } from "../../components/offcanvas/mobile-sidebar/mobile-sidebar.component";

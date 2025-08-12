@@ -1,23 +1,30 @@
+/* Full header container */
 .header-full-width {
   width: 100%;
   display: flex;
-  align-items: center;
+  align-items: center; /* Align logo, menu, search bar vertically */
   background: inherit;
+  padding: 0; /* Keep compact */
+   height: 60px;
 }
 
 /* Logo fully left */
 .logo {
   flex-shrink: 0;
   padding-left: 12px;
+  display: flex;
+  align-items: center;
 }
 .logo img {
-  max-height: 45px;
+  max-height: 38px; /* Compact logo */
 }
 
 /* Main menu styling */
 .tp-main-menu-content {
   flex: 1;
   margin-left: 30px;
+  display: flex;
+  align-items: center;
 }
 
 /* Remove dropdown arrows */
@@ -51,7 +58,6 @@
   position: relative;
 }
 
-/* Override Bootstrap hiding if present */
 .tp-header-action-item.d-none.d-lg-flex,
 .tp-header-action-item.d-none.d-lg-block {
   display: flex !important;
@@ -82,25 +88,35 @@
 /* Search bar */
 .tp-header-search-2 {
   margin-right: 10px;
-}
-.tp-header-search-2 form {
   display: flex;
   align-items: center;
 }
-.tp-header-search-2 input {
-  width: 280px;
-  padding: 8px 12px;
-  border: 1px solid #eaeaec;
-  border-right: none;
-  border-radius: 4px 0 0 4px;
-  font-size: 14px;
-}
-.tp-header-search-2 button {
-  border: 1px solid #eaeaec;
-  border-left: none;
-  background: #f5f5f6;
-  padding: 8px 12px;
-  border-radius: 0 4px 4px 0;
-  cursor: pointer;
+
+.tp-header-search-2 form {
+  position: relative; /* Needed for icon positioning */
+  display: flex;
+  align-items: center;
 }
 
+.tp-header-search-2 input {
+  width: 280px;
+ height: 40px;
+ padding: 0 36px 0 12px; 
+  border: 1px solid #eaeaec;
+  border-radius: 4px;
+  font-size: 14px;
+}
+
+.tp-header-search-2 button {
+  position: absolute;
+  right: 15px;
+  background: none;
+  border: none;
+  padding: 0;
+  font-size: 16px;
+  color: #666;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
