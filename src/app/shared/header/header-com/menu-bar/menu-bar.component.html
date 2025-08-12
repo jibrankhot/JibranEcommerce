@@ -1,9 +1,9 @@
 <ul class="main-menu">
   <li *ngFor="let item of menu_data; let i = index"
     [ngClass]="{'has-dropdown': item.drop_down && !item.mega_menu, 'has-mega-menu': item.mega_menu}">
+
     <a [routerLink]="item.link">
       {{ item.title }}
-      <span *ngIf="item.drop_down || item.mega_menu" class="dropdown-arrow">▼</span>
     </a>
 
     <div *ngIf="item.home_pages" class="home-menu tp-submenu tp-mega-menu">
@@ -63,7 +63,6 @@
       <li *ngFor="let prd_m of item.product_menus; let i = index" class="has-dropdown">
         <a [routerLink]="prd_m.link" class="mega-menu-title">
           {{ prd_m.title }}
-          <span *ngIf="prd_m.dropdown_menus?.length" class="dropdown-arrow">▼</span>
         </a>
 
         <ul class="tp-submenu">
