@@ -1,6 +1,6 @@
 import { Component, Input } from '@angular/core';
 import { SharedModule } from '../../shared.module';
-import { HeaderTwoComponent } from "../../shared/header/header-two/header-two.component";
+import { FashionHeaderComponent } from "../../shared/header/fashionHeaderComponent/fashionheadercomponent";
 import { HeroBannerTwoComponent } from "../../shared/components/hero-banner/hero-banner-two/hero-banner-two.component";
 import { FashionCategoryComponent } from "../../shared/components/category/fashion-category/fashion-category.component";
 import { FashionPopularProductsComponent } from "../../shop/product/fashion/fashion-popular-products/fashion-popular-products.component";
@@ -15,10 +15,10 @@ import { InstagramAreaTwoComponent } from "../../shared/components/instagram/ins
 import { FooterOneComponent } from "../../shared/footer/footer-one/footer-one.component";
 
 @Component({
-    selector: 'app-fashion',
-    templateUrl: './fashion.component.html',
-    styleUrls: ['./fashion.component.scss'],
-    imports: [SharedModule, HeaderTwoComponent, HeroBannerTwoComponent, FashionCategoryComponent, FashionPopularProductsComponent, FashionAllProductsComponent, FashionFeaturedProductsComponent, FashionNewTrendingItemsComponent, FashionBestSellItemsComponent, FashionTestimonialComponent, FashionBlogAreaComponent, FeatureTwoComponent, InstagramAreaTwoComponent, FooterOneComponent]
+  selector: 'app-fashion',
+  templateUrl: './fashion.component.html',
+  styleUrls: ['./fashion.component.scss'],
+  imports: [SharedModule, FashionHeaderComponent, HeroBannerTwoComponent, FashionCategoryComponent, FashionPopularProductsComponent, FashionAllProductsComponent, FashionFeaturedProductsComponent, FashionNewTrendingItemsComponent, FashionBestSellItemsComponent, FashionTestimonialComponent, FashionBlogAreaComponent, FeatureTwoComponent, InstagramAreaTwoComponent, FooterOneComponent]
 })
 export class FashionComponent {
   @Input() style_2: Boolean | undefined;

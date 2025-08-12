@@ -3,7 +3,7 @@ import Swiper from 'swiper';
 import { register } from 'swiper/element/bundle';
 import { SharedModule } from '../../shared.module';
 import { FooterOneComponent } from "../../shared/footer/footer-one/footer-one.component";
-import { HeaderTwoComponent } from "../../shared/header/header-two/header-two.component";
+import { FashionHeaderComponent } from "../../shared/header/fashionHeaderComponent/fashionheadercomponent";
 import { DomUtilsService } from '../../shared/services/dom-utils.service';
 register();
 
@@ -11,7 +11,7 @@ register();
   selector: 'app-about',
   templateUrl: './about.component.html',
   styleUrls: ['./about.component.scss'],
-  imports: [SharedModule, FooterOneComponent, HeaderTwoComponent]
+  imports: [SharedModule, FooterOneComponent, FashionHeaderComponent]
 })
 export class AboutComponent {
   constructor(

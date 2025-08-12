@@ -9,13 +9,13 @@ import { ProductDetailsTabNavComponent } from "../../../shared/components/produc
 import { ProductDetailsWrapperComponent } from "../../../shared/components/product-details-com/product-details-wrapper/product-details-wrapper.component";
 import { ProductDetailsThumbComponent } from "../../../shared/components/product-details-com/product-details-thumb/product-details-thumb.component";
 import { ShopDetailsBreadcrumbComponent } from "../../../shared/components/breadcrumb/shop-details-breadcrumb/shop-details-breadcrumb.component";
-import { HeaderTwoComponent } from "../../../shared/header/header-two/header-two.component";
+import { FashionHeaderComponent } from "../../../shared/header/fashionHeaderComponent/fashionheadercomponent";
 
 @Component({
-    selector: 'app-product-details-with-countdown',
-    templateUrl: './product-details-with-countdown.component.html',
-    styleUrls: ['./product-details-with-countdown.component.scss'],
-    imports: [SharedModule, FooterOneComponent, RelatedProductsComponent, ProductDetailsTabNavComponent, ProductDetailsWrapperComponent, ProductDetailsThumbComponent, ShopDetailsBreadcrumbComponent, HeaderTwoComponent]
+  selector: 'app-product-details-with-countdown',
+  templateUrl: './product-details-with-countdown.component.html',
+  styleUrls: ['./product-details-with-countdown.component.scss'],
+  imports: [SharedModule, FooterOneComponent, RelatedProductsComponent, ProductDetailsTabNavComponent, ProductDetailsWrapperComponent, ProductDetailsThumbComponent, ShopDetailsBreadcrumbComponent, FashionHeaderComponent]
 })
 export class ProductDetailsWithCountdownComponent {
 

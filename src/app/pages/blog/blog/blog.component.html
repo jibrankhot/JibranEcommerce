@@ -1,5 +1,5 @@
 <!-- header start -->
-<app-header-two [style_2]="true"></app-header-two>
+<app-fashion-header [style_2]="true"></app-fashion-header>
 <!-- header end -->
 
 <main>
@@ -13,18 +13,13 @@
       <div class="row">
         <div class="col-xl-9 col-lg-8">
           <div class="tp-postbox-wrapper pr-50">
-            <ng-container
-              *ngFor="let item of blogs.slice(startIndex, endIndex);let i = index"
-            >
+            <ng-container *ngFor="let item of blogs.slice(startIndex, endIndex);let i = index">
               <app-blog-postbox-item [blog]="item"></app-blog-postbox-item>
             </ng-container>
             <div class="tp-blog-pagination mt-50">
               <div class="tp-pagination">
-                <app-pagination-two
-                  [itemsPerPage]="4"
-                  [data]="blogs"
-                  (handlePaginate)="handlePagination($event)"
-                ></app-pagination-two>
+                <app-pagination-two [itemsPerPage]="4" [data]="blogs"
+                  (handlePaginate)="handlePagination($event)"></app-pagination-two>
               </div>
             </div>
           </div>
@@ -43,5 +38,3 @@
 <!-- footer start -->
 <app-footer-one [primary_style]="true"></app-footer-one>
 <!-- footer end -->
-
-

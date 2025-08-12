@@ -6,13 +6,13 @@ import { IBlogType } from '../../../shared/types/blog-type';
 import blogData from '../../../shared/data/blog-data';
 import { FooterOneComponent } from "../../../shared/footer/footer-one/footer-one.component";
 import { BlogDetailsAreaComponent } from "../../../shared/components/blog/blog-details-area/blog-details-area.component";
-import { HeaderTwoComponent } from "../../../shared/header/header-two/header-two.component";
+import { FashionHeaderComponent } from "../../../shared/header/fashionHeaderComponent/fashionheadercomponent";
 
 @Component({
-    selector: 'app-dynamic-blog-details',
-    templateUrl: './dynamic-blog-details.component.html',
-    styleUrls: ['./dynamic-blog-details.component.scss'],
-    imports: [SharedModule, FooterOneComponent, BlogDetailsAreaComponent, HeaderTwoComponent]
+  selector: 'app-dynamic-blog-details',
+  templateUrl: './dynamic-blog-details.component.html',
+  styleUrls: ['./dynamic-blog-details.component.scss'],
+  imports: [SharedModule, FooterOneComponent, BlogDetailsAreaComponent, FashionHeaderComponent]
 })
 export class DynamicBlogDetailsComponent {
 

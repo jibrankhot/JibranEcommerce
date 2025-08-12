@@ -2,15 +2,15 @@
 import { Component } from '@angular/core';
 import { SharedModule } from '../../../shared.module';
 import { CartService } from '../../../shared/services/cart.service';
-import { HeaderTwoComponent } from "../../../shared/header/header-two/header-two.component";
+import { FashionHeaderComponent } from "../../../shared/header/fashionHeaderComponent/fashionheadercomponent";
 import { BreadcrumbOneComponent } from "../../../shared/components/breadcrumb/breadcrumb-one/breadcrumb-one.component";
 import { FooterOneComponent } from "../../../shared/footer/footer-one/footer-one.component";
 
 @Component({
-    selector: 'app-cart',
-    templateUrl: './cart.component.html',
-    styleUrls: ['./cart.component.scss'],
-    imports: [SharedModule, HeaderTwoComponent, BreadcrumbOneComponent, FooterOneComponent]
+  selector: 'app-cart',
+  templateUrl: './cart.component.html',
+  styleUrls: ['./cart.component.scss'],
+  imports: [SharedModule, FashionHeaderComponent, BreadcrumbOneComponent, FooterOneComponent]
 })
 export class CartComponent {
 

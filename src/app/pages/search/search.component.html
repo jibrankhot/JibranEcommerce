@@ -1,13 +1,13 @@
- <!-- header start -->
- <app-header-two [style_2]="true"></app-header-two>
- <!-- header end -->
+<!-- header start -->
+<app-fashion-header [style_2]="true"></app-fashion-header>
+<!-- header end -->
 
- <main>
-   <!-- breadcrumb area start -->
-   <app-breadcrumb-one title="Search Products" subtitle="Search Products"></app-breadcrumb-one>
-   <!-- breadcrumb area end -->
+<main>
+  <!-- breadcrumb area start -->
+  <app-breadcrumb-one title="Search Products" subtitle="Search Products"></app-breadcrumb-one>
+  <!-- breadcrumb area end -->
 
-   <!-- shop area start -->
+  <!-- shop area start -->
   <section class="tp-shop-area pb-120">
     <div class="container">
       <div class="row">
@@ -19,21 +19,17 @@
                   <div class="tp-shop-top-left d-flex align-items-center">
                     <div class="tp-shop-top-result">
                       <p>
-                        Showing 1–{{ products.length > perView ? perView : products.length }} of {{ products.length }} results
+                        Showing 1–{{ products.length > perView ? perView : products.length }} of {{ products.length }}
+                        results
                       </p>
                     </div>
                   </div>
                 </div>
                 <div class="col-xl-6">
                   <div class="tp-shop-top-select text-md-end">
-                    <app-nice-select
-                    [options]="selectOptions"
-                    name="Default Sorting"
-                    [defaultCurrent]="0"
-                    (onChange)="changeFilterSelect($event)"
-                    placeholder="Default Sorting"
-                    class="d-flex justify-content-end"
-                  ></app-nice-select>
+                    <app-nice-select [options]="selectOptions" name="Default Sorting" [defaultCurrent]="0"
+                      (onChange)="changeFilterSelect($event)" placeholder="Default Sorting"
+                      class="d-flex justify-content-end"></app-nice-select>
                   </div>
                 </div>
               </div>
@@ -49,7 +45,8 @@
             </div>
           </div>
           <div class="text-center">
-            <button *ngIf="perView < products.length" (click)="handlePerView()" type="button" class="btn-loadmore tp-btn tp-btn-border tp-btn-border-primary">
+            <button *ngIf="perView < products.length" (click)="handlePerView()" type="button"
+              class="btn-loadmore tp-btn tp-btn-border tp-btn-border-primary">
               Load More Products
             </button>
             <p *ngIf="perView >= products.length" class="btn-loadmore-text">End Of Products</p>
@@ -59,8 +56,8 @@
     </div>
   </section>
   <!-- shop area end -->
- </main>
+</main>
 
- <!-- footer start -->
+<!-- footer start -->
 <app-footer-one [primary_style]="true"></app-footer-one>
 <!-- footer end -->

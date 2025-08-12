@@ -7,14 +7,14 @@ import { ProductService } from '../../../shared/services/product.service';
 import { FooterOneComponent } from "../../../shared/footer/footer-one/footer-one.component";
 import { ShopAreaComponent } from "../../shop-area/shop-area.component";
 import { BreadcrumbOneComponent } from "../../../shared/components/breadcrumb/breadcrumb-one/breadcrumb-one.component";
-import { HeaderTwoComponent } from "../../../shared/header/header-two/header-two.component";
+import { FashionHeaderComponent } from "../../../shared/header/fashionHeaderComponent/fashionheadercomponent";
 
 @Component({
   selector: 'app-shop',
   standalone: true,
   templateUrl: './shop.component.html',
   styleUrls: ['./shop.component.scss'],
-  imports: [SharedModule, FooterOneComponent, ShopAreaComponent, BreadcrumbOneComponent, HeaderTwoComponent]
+  imports: [SharedModule, FooterOneComponent, ShopAreaComponent, BreadcrumbOneComponent, FashionHeaderComponent]
 })
 export class ShopComponent {
   @Input() listStyle: boolean = false;

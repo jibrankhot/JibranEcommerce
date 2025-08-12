@@ -5,13 +5,13 @@ import { ICategory } from '../../../shared/types/category-type';
 import category_data from '../../../shared/data/category-data';
 import { FooterOneComponent } from "../../../shared/footer/footer-one/footer-one.component";
 import { BreadcrumbOneComponent } from "../../../shared/components/breadcrumb/breadcrumb-one/breadcrumb-one.component";
-import { HeaderTwoComponent } from "../../../shared/header/header-two/header-two.component";
+import { FashionHeaderComponent } from "../../../shared/header/fashionHeaderComponent/fashionheadercomponent";
 
 @Component({
   selector: 'app-shop-category',
   templateUrl: './shop-category.component.html',
   styleUrls: ['./shop-category.component.scss'],
-  imports: [SharedModule, FooterOneComponent, BreadcrumbOneComponent, HeaderTwoComponent]
+  imports: [SharedModule, FooterOneComponent, BreadcrumbOneComponent, FashionHeaderComponent]
 })
 export class ShopCategoryComponent {
   public category_data: ICategory[] = category_data;

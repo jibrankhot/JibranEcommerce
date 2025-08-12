@@ -7,13 +7,13 @@ import { RelatedProductsComponent } from "../../product/related-products/related
 import { ProductDetailsTabNavComponent } from "../../../shared/components/product-details-com/product-details-tab-nav/product-details-tab-nav.component";
 import { ProductDetailsWrapperComponent } from "../../../shared/components/product-details-com/product-details-wrapper/product-details-wrapper.component";
 import { ShopDetailsBreadcrumbComponent } from "../../../shared/components/breadcrumb/shop-details-breadcrumb/shop-details-breadcrumb.component";
-import { HeaderTwoComponent } from "../../../shared/header/header-two/header-two.component";
+import { FashionHeaderComponent } from "../../../shared/header/fashionHeaderComponent/fashionheadercomponent";
 
 @Component({
-    selector: 'app-product-details-gallery',
-    templateUrl: './product-details-gallery.component.html',
-    styleUrls: ['./product-details-gallery.component.scss'],
-    imports: [SharedModule, FooterOneComponent, RelatedProductsComponent, ProductDetailsTabNavComponent, ProductDetailsWrapperComponent, ShopDetailsBreadcrumbComponent, HeaderTwoComponent]
+  selector: 'app-product-details-gallery',
+  templateUrl: './product-details-gallery.component.html',
+  styleUrls: ['./product-details-gallery.component.scss'],
+  imports: [SharedModule, FooterOneComponent, RelatedProductsComponent, ProductDetailsTabNavComponent, ProductDetailsWrapperComponent, ShopDetailsBreadcrumbComponent, FashionHeaderComponent]
 })
 export class ProductDetailsGalleryComponent {
   public product!: IProduct;

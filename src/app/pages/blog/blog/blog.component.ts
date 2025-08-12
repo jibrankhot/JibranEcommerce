@@ -11,14 +11,14 @@ import { BlogSidebarComponent } from "../../../shared/components/blog/blog-sideb
 import { PaginationTwoComponent } from "../../../shared/ui/pagination-two/pagination-two.component";
 import { BlogPostboxItemComponent } from "../../../shared/components/blog/blog-postbox-item/blog-postbox-item.component";
 import { BreadcrumbTwoComponent } from "../../../shared/components/breadcrumb/breadcrumb-two/breadcrumb-two.component";
-import { HeaderTwoComponent } from "../../../shared/header/header-two/header-two.component";
+import { FashionHeaderComponent } from "../../../shared/header/fashionHeaderComponent/fashionheadercomponent";
 
 
 @Component({
-    selector: 'app-blog',
-    templateUrl: './blog.component.html',
-    styleUrls: ['./blog.component.scss'],
-    imports: [SharedModule, FooterOneComponent, BlogSidebarComponent, PaginationTwoComponent, BlogPostboxItemComponent, BreadcrumbTwoComponent, HeaderTwoComponent]
+  selector: 'app-blog',
+  templateUrl: './blog.component.html',
+  styleUrls: ['./blog.component.scss'],
+  imports: [SharedModule, FooterOneComponent, BlogSidebarComponent, PaginationTwoComponent, BlogPostboxItemComponent, BreadcrumbTwoComponent, FashionHeaderComponent]
 })
 export class BlogComponent {
   public blogs: IBlogType[] = [];

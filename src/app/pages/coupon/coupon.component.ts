@@ -5,13 +5,13 @@ import { ICoupon } from '../../shared/types/coupon-type';
 import { FooterOneComponent } from "../../shared/footer/footer-one/footer-one.component";
 import { CountdownTimerComponent } from "../../shared/components/countdown-timer/countdown-timer.component";
 import { BreadcrumbOneComponent } from "../../shared/components/breadcrumb/breadcrumb-one/breadcrumb-one.component";
-import { HeaderTwoComponent } from "../../shared/header/header-two/header-two.component";
+import { FashionHeaderComponent } from "../../shared/header/fashionHeaderComponent/fashionheadercomponent";
 
 @Component({
-    selector: 'app-coupon',
-    templateUrl: './coupon.component.html',
-    styleUrls: ['./coupon.component.scss'],
-    imports: [SharedModule, FooterOneComponent, CountdownTimerComponent, BreadcrumbOneComponent, HeaderTwoComponent]
+  selector: 'app-coupon',
+  templateUrl: './coupon.component.html',
+  styleUrls: ['./coupon.component.scss'],
+  imports: [SharedModule, FooterOneComponent, CountdownTimerComponent, BreadcrumbOneComponent, FashionHeaderComponent]
 })
 export class CouponComponent {
   public coupons = coupon_data;

@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { SharedModule } from '../../shared.module';
-import { HeaderTwoComponent } from "../../shared/header/header-two/header-two.component";
+import { FashionHeaderComponent } from "../../shared/header/fashionHeaderComponent/fashionheadercomponent";
 import { SocialLoginComponent } from "../../shared/components/social-login/social-login.component";
 import { LoginFormComponent } from "../../shared/components/forms/login-form/login-form.component";
 import { FooterOneComponent } from "../../shared/footer/footer-one/footer-one.component";
@@ -9,7 +9,7 @@ import { FooterOneComponent } from "../../shared/footer/footer-one/footer-one.co
     selector: 'app-login',
     templateUrl: './login.component.html',
     styleUrls: ['./login.component.scss'],
-    imports: [SharedModule, HeaderTwoComponent, SocialLoginComponent, LoginFormComponent, FooterOneComponent]
+    imports: [SharedModule, FashionHeaderComponent, SocialLoginComponent, LoginFormComponent, FooterOneComponent]
 })
 export class LoginComponent {
 

@@ -7,14 +7,14 @@ import { BlogSidebarComponent } from "../../../shared/components/blog/blog-sideb
 import { PaginationTwoComponent } from "../../../shared/ui/pagination-two/pagination-two.component";
 import { BlogListItemComponent } from "../../../shared/components/blog/blog-list-item/blog-list-item.component";
 import { BlogGridItemComponent } from "../../../shared/components/blog/blog-grid-item/blog-grid-item.component";
-import { HeaderTwoComponent } from "../../../shared/header/header-two/header-two.component";
+import { FashionHeaderComponent } from "../../../shared/header/fashionHeaderComponent/fashionheadercomponent";
 
 
 @Component({
-    selector: 'app-blog-grid',
-    templateUrl: './blog-grid.component.html',
-    styleUrls: ['./blog-grid.component.scss'],
-    imports: [SharedModule, FooterOneComponent, BlogSidebarComponent, PaginationTwoComponent, BlogListItemComponent, BlogGridItemComponent, HeaderTwoComponent]
+  selector: 'app-blog-grid',
+  templateUrl: './blog-grid.component.html',
+  styleUrls: ['./blog-grid.component.scss'],
+  imports: [SharedModule, FooterOneComponent, BlogSidebarComponent, PaginationTwoComponent, BlogListItemComponent, BlogGridItemComponent, FashionHeaderComponent]
 })
 export class BlogGridComponent {
   @Input() list_style: boolean = false;

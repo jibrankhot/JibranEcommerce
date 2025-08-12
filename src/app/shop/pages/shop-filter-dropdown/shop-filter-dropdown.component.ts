@@ -5,7 +5,7 @@ import { ViewportScroller } from '@angular/common';
 import { SharedModule } from '../../../shared.module';
 import { IProduct } from '../../../shared/types/product-type';
 import { ProductService } from '../../../shared/services/product.service';
-import { HeaderTwoComponent } from "../../../shared/header/header-two/header-two.component";
+import { FashionHeaderComponent } from "../../../shared/header/fashionHeaderComponent/fashionheadercomponent";
 import { BreadcrumbOneComponent } from "../../../shared/components/breadcrumb/breadcrumb-one/breadcrumb-one.component";
 import { NiceSelectComponent } from "../../../shared/ui/nice-select/nice-select.component";
 import { StatusFilterComponent } from "../../filtering/status-filter/status-filter.component";
@@ -19,10 +19,10 @@ import { FooterOneComponent } from "../../../shared/footer/footer-one/footer-one
 import { PriceFilterComponent } from '../../filtering/price-filter/price-filter.component';
 
 @Component({
-    selector: 'app-shop-filter-dropdown',
-    templateUrl: './shop-filter-dropdown.component.html',
-    styleUrls: ['./shop-filter-dropdown.component.scss'],
-    imports: [SharedModule, PriceFilterComponent, HeaderTwoComponent, BreadcrumbOneComponent, NiceSelectComponent, StatusFilterComponent, CategoryFilterComponent, ResetFilterRouteComponent, TopRatedProductsComponent, ProductItemTwoComponent, ProductListItemComponent, PaginationComponent, FooterOneComponent]
+  selector: 'app-shop-filter-dropdown',
+  templateUrl: './shop-filter-dropdown.component.html',
+  styleUrls: ['./shop-filter-dropdown.component.scss'],
+  imports: [SharedModule, PriceFilterComponent, FashionHeaderComponent, BreadcrumbOneComponent, NiceSelectComponent, StatusFilterComponent, CategoryFilterComponent, ResetFilterRouteComponent, TopRatedProductsComponent, ProductItemTwoComponent, ProductListItemComponent, PaginationComponent, FooterOneComponent]
 })
 export class ShopFilterDropdownComponent {
   public products: IProduct[] = [];

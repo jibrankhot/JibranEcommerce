@@ -2,14 +2,14 @@ import { Component } from '@angular/core';
 import { ToastrService } from 'ngx-toastr';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
 import { SharedModule } from '../../shared.module';
-import { HeaderTwoComponent } from "../../shared/header/header-two/header-two.component";
+import { FashionHeaderComponent } from "../../shared/header/fashionHeaderComponent/fashionheadercomponent";
 import { FooterOneComponent } from "../../shared/footer/footer-one/footer-one.component";
 
 @Component({
-    selector: 'app-forgot-password',
-    templateUrl: './forgot-password.component.html',
-    styleUrls: ['./forgot-password.component.scss'],
-    imports: [SharedModule, HeaderTwoComponent, FooterOneComponent]
+  selector: 'app-forgot-password',
+  templateUrl: './forgot-password.component.html',
+  styleUrls: ['./forgot-password.component.scss'],
+  imports: [SharedModule, FashionHeaderComponent, FooterOneComponent]
 })
 export class ForgotPasswordComponent {
 

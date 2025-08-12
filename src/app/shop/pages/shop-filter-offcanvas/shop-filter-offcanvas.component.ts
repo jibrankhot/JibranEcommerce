@@ -5,7 +5,7 @@ import { ViewportScroller } from '@angular/common';
 import { SharedModule } from '../../../shared.module';
 import { IProduct } from '../../../shared/types/product-type';
 import { ProductService } from '../../../shared/services/product.service';
-import { HeaderTwoComponent } from "../../../shared/header/header-two/header-two.component";
+import { FashionHeaderComponent } from "../../../shared/header/fashionHeaderComponent/fashionheadercomponent";
 import { BreadcrumbOneComponent } from "../../../shared/components/breadcrumb/breadcrumb-one/breadcrumb-one.component";
 import { NiceSelectComponent } from "../../../shared/ui/nice-select/nice-select.component";
 import { ProductItemTwoComponent } from "../../product/fashion/product-item-two/product-item-two.component";
@@ -20,10 +20,10 @@ import { CategoryFilterComponent } from "../../filtering/category-filter/categor
 import { StatusFilterComponent } from "../../filtering/status-filter/status-filter.component";
 
 @Component({
-    selector: 'app-shop-filter-offcanvas',
-    templateUrl: './shop-filter-offcanvas.component.html',
-    styleUrls: ['./shop-filter-offcanvas.component.scss'],
-    imports: [SharedModule, PriceFilterComponent, HeaderTwoComponent, BreadcrumbOneComponent, NiceSelectComponent, ProductItemTwoComponent, ProductListItemComponent, PaginationComponent, FooterOneComponent, ResetFilterRouteComponent, BrandFilterComponent, TopRatedProductsComponent, CategoryFilterComponent, StatusFilterComponent]
+  selector: 'app-shop-filter-offcanvas',
+  templateUrl: './shop-filter-offcanvas.component.html',
+  styleUrls: ['./shop-filter-offcanvas.component.scss'],
+  imports: [SharedModule, PriceFilterComponent, FashionHeaderComponent, BreadcrumbOneComponent, NiceSelectComponent, ProductItemTwoComponent, ProductListItemComponent, PaginationComponent, FooterOneComponent, ResetFilterRouteComponent, BrandFilterComponent, TopRatedProductsComponent, CategoryFilterComponent, StatusFilterComponent]
 })
 export class ShopFilterOffcanvasComponent {
 

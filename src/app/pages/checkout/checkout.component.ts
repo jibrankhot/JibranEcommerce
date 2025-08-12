@@ -7,13 +7,13 @@ import { FooterOneComponent } from "../../shared/footer/footer-one/footer-one.co
 import { NiceSelectComponent } from "../../shared/ui/nice-select/nice-select.component";
 import { LoginFormComponent } from "../../shared/components/forms/login-form/login-form.component";
 import { BreadcrumbOneComponent } from "../../shared/components/breadcrumb/breadcrumb-one/breadcrumb-one.component";
-import { HeaderTwoComponent } from "../../shared/header/header-two/header-two.component";
+import { FashionHeaderComponent } from "../../shared/header/fashionHeaderComponent/fashionheadercomponent";
 
 @Component({
-    selector: 'app-checkout',
-    templateUrl: './checkout.component.html',
-    styleUrls: ['./checkout.component.scss'],
-    imports: [SharedModule, FooterOneComponent, NiceSelectComponent, LoginFormComponent, BreadcrumbOneComponent, HeaderTwoComponent]
+  selector: 'app-checkout',
+  templateUrl: './checkout.component.html',
+  styleUrls: ['./checkout.component.scss'],
+  imports: [SharedModule, FooterOneComponent, NiceSelectComponent, LoginFormComponent, BreadcrumbOneComponent, FashionHeaderComponent]
 })
 export class CheckoutComponent {
 

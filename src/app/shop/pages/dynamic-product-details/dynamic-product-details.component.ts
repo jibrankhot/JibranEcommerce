@@ -12,13 +12,13 @@ import { ProductDetailsTabNavComponent } from "../../../shared/components/produc
 import { ProductDetailsWrapperComponent } from "../../../shared/components/product-details-com/product-details-wrapper/product-details-wrapper.component";
 import { ProductDetailsThumbComponent } from "../../../shared/components/product-details-com/product-details-thumb/product-details-thumb.component";
 import { ShopDetailsBreadcrumbComponent } from "../../../shared/components/breadcrumb/shop-details-breadcrumb/shop-details-breadcrumb.component";
-import { HeaderTwoComponent } from "../../../shared/header/header-two/header-two.component";
+import { FashionHeaderComponent } from "../../../shared/header/fashionHeaderComponent/fashionheadercomponent";
 
 @Component({
-    selector: 'app-dynamic-product-details',
-    templateUrl: './dynamic-product-details.component.html',
-    styleUrls: ['./dynamic-product-details.component.scss'],
-    imports: [SharedModule, FooterOneComponent, RelatedProductsComponent, ProductDetailsTabNavComponent, ProductDetailsWrapperComponent, ProductDetailsThumbComponent, ShopDetailsBreadcrumbComponent, HeaderTwoComponent]
+  selector: 'app-dynamic-product-details',
+  templateUrl: './dynamic-product-details.component.html',
+  styleUrls: ['./dynamic-product-details.component.scss'],
+  imports: [SharedModule, FooterOneComponent, RelatedProductsComponent, ProductDetailsTabNavComponent, ProductDetailsWrapperComponent, ProductDetailsThumbComponent, ShopDetailsBreadcrumbComponent, FashionHeaderComponent]
 })
 export class DynamicProductDetailsComponent implements OnInit {
   public product: IProduct | null | undefined;

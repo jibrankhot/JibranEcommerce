@@ -4,7 +4,7 @@ import { CommonModule, ViewportScroller } from '@angular/common';
 import { SharedModule } from '../../../shared.module';
 import { IProduct } from '../../../shared/types/product-type';
 import { ProductService } from '../../../shared/services/product.service';
-import { HeaderTwoComponent } from "../../../shared/header/header-two/header-two.component";
+import { FashionHeaderComponent } from "../../../shared/header/fashionHeaderComponent/fashionheadercomponent";
 import { BreadcrumbOneComponent } from "../../../shared/components/breadcrumb/breadcrumb-one/breadcrumb-one.component";
 import { CategoryFilterComponent } from "../../filtering/category-filter/category-filter.component";
 import { TopRatedProductsComponent } from "../../product/widget/top-rated-products/top-rated-products.component";
@@ -23,16 +23,16 @@ import { StatusFilterComponent } from "../../filtering/status-filter/status-filt
 import { PriceFilterComponent } from '../../filtering/price-filter/price-filter.component';
 
 @Component({
-    selector: 'app-shop-load-more',
-    templateUrl: './shop-load-more.component.html',
-    styleUrls: ['./shop-load-more.component.scss'],
-    imports: [CommonModule,
-        RouterModule,
-        FormsModule,
-        ReactiveFormsModule,
-        ProductListItemComponent, ProductItemTwoComponent, NiceSelectComponent,
-        BrandFilterComponent, ResetFilterRouteComponent, CategoryFilterComponent,
-        StatusFilterComponent, PriceFilterComponent, HeaderTwoComponent, BreadcrumbOneComponent, TopRatedProductsComponent, FooterOneComponent]
+  selector: 'app-shop-load-more',
+  templateUrl: './shop-load-more.component.html',
+  styleUrls: ['./shop-load-more.component.scss'],
+  imports: [CommonModule,
+    RouterModule,
+    FormsModule,
+    ReactiveFormsModule,
+    ProductListItemComponent, ProductItemTwoComponent, NiceSelectComponent,
+    BrandFilterComponent, ResetFilterRouteComponent, CategoryFilterComponent,
+    StatusFilterComponent, PriceFilterComponent, FashionHeaderComponent, BreadcrumbOneComponent, TopRatedProductsComponent, FooterOneComponent]
 })
 export class ShopLoadMoreComponent {
 

@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { SharedModule } from '../../../shared.module';
-import { HeaderTwoComponent } from "../../../shared/header/header-two/header-two.component";
+import { FashionHeaderComponent } from "../../../shared/header/fashionHeaderComponent/fashionheadercomponent";
 import { BreadcrumbOneComponent } from "../../../shared/components/breadcrumb/breadcrumb-one/breadcrumb-one.component";
 import { FooterOneComponent } from "../../../shared/footer/footer-one/footer-one.component";
 
@@ -8,7 +8,7 @@ import { FooterOneComponent } from "../../../shared/footer/footer-one/footer-one
     selector: 'app-order',
     templateUrl: './order.component.html',
     styleUrls: ['./order.component.scss'],
-    imports: [SharedModule, HeaderTwoComponent, BreadcrumbOneComponent, FooterOneComponent]
+    imports: [SharedModule, FashionHeaderComponent, BreadcrumbOneComponent, FooterOneComponent]
 })
 export class OrderComponent {
 
