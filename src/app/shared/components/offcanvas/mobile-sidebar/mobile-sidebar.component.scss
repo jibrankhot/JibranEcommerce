@@ -16,24 +16,27 @@
     background: rgba(0, 0, 0, 0.5);
     opacity: 0;
     transition: opacity 0.3s ease-in-out;
+    pointer-events: none;
   }
 
   .sidebar-content {
     position: absolute;
     top: 0;
-    left: -300px;
-    width: 280px;
+    left: -320px; // hidden off-screen
+    width: 80%;   // sidebar width (adjustable)
+    max-width: 320px;
     height: 100%;
     background: #fff;
     transition: left 0.3s ease-in-out;
     padding: 15px;
     overflow-y: auto;
+    box-shadow: 2px 0 8px rgba(0, 0, 0, 0.15);
   }
 
   .close-btn {
     background: none;
     border: none;
-    font-size: 20px;
+    font-size: 22px;
     cursor: pointer;
     margin-bottom: 15px;
     display: flex;
@@ -45,6 +48,7 @@
 
     .overlay {
       opacity: 1;
+      pointer-events: auto;
     }
 
     .sidebar-content {

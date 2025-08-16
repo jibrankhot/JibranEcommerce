@@ -168,8 +168,6 @@
 <div (click)="utilsService.handleOpenMobileMenu()" [ngClass]="['body-overlay', utilsService.openMobileMenus ? 'opened' : '']"></div>
 
  mobile category end -->
-
-
 <div class="mobile-sidebar" [ngClass]="{ 'opened': utilsService.isMobileSidebarOpen }">
   <!-- Overlay -->
   <div class="overlay" (click)="utilsService.closeMobileSidebar()"></div>
@@ -181,10 +179,10 @@
       ✕
     </button>
 
-    <!-- Menu -->
-    <div class="main-menu menu-style-2">
+    <!-- Mobile Menu (Myntra style) -->
+    <div class="main-menu">
       <nav class="tp-main-menu-content">
-        <app-menu-bar></app-menu-bar>
+        <app-menu-bar [isMobile]="true"></app-menu-bar>
       </nav>
     </div>
   </div>
