@@ -19,6 +19,8 @@ export class FashionHeaderComponent {
   @Input() style_2: boolean = false;
 
   public searchText: string = '';
+  public sticky: boolean = false;
+  public isMobile: boolean = window.innerWidth < 992;
 
   constructor(
     public cartService: CartService,
@@ -27,26 +29,20 @@ export class FashionHeaderComponent {
     private router: Router
   ) { }
 
-  sticky: boolean = false;
-  @HostListener('window:scroll', ['$event']) onscroll() {
-    if (window.scrollY > 80) {
-      this.sticky = true
-    }
-    else {
-      this.sticky = false
-    }
+  @HostListener('window:scroll', ['$event'])
+  onscroll() {
+    this.sticky = window.scrollY > 80;
+  }
+
+  @HostListener('window:resize')
+  onResize() {
+    this.isMobile = window.innerWidth < 992;
   }
 
   handleSearchSubmit() {
-    const queryParams: { [key: string]: string | null } = {};
-    if (!this.searchText) {
-      return
-    }
-    else {
-      if (this.searchText) {
-        queryParams['searchText'] = this.searchText;
-      }
-      this.router.navigate(['/pages/search'], { queryParams });
-    }
+    if (!this.searchText) return;
+    this.router.navigate(['/pages/search'], {
+      queryParams: { searchText: this.searchText }
+    });
   }
 }

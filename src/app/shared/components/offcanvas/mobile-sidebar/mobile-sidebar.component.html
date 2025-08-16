@@ -1,3 +1,4 @@
+<!-- mobile category start 
 <div [ngClass]="['offcanvas__area offcanvas__radius', utilsService.openMobileMenus ? 'offcanvas-opened' : '']"
 >
 <div class="offcanvas__wrapper">
@@ -17,8 +18,7 @@
         </a>
       </div>
     </div>
-    <!-- mobile category start -->
-    <!-- <header-component-mobile-categories :product-type="productType" /> -->
+  
     <div class="offcanvas__category pb-40">
       <button (click)="toggleCategoryActive()" class="tp-offcanvas-category-toggle">
         <i class="fa-solid fa-bars"></i>
@@ -48,9 +48,7 @@
         </nav>
       </div>
     </div>
-    <!-- mobile category end -->
     <div class="tp-main-menu-mobile fix d-lg-none mb-40">
-      <!-- mobile menus start -->
 
     <nav class="tp-main-menu-content">
       <ul *ngFor="let menu of mobile_menu">
@@ -111,7 +109,6 @@
       </ul>
     </nav>
 
-      <!-- mobile menus end -->
     </div>
 
     <div class="offcanvas__contact align-items-center d-none">
@@ -169,3 +166,26 @@
 </div>
 
 <div (click)="utilsService.handleOpenMobileMenu()" [ngClass]="['body-overlay', utilsService.openMobileMenus ? 'opened' : '']"></div>
+
+ mobile category end -->
+
+
+<div class="mobile-sidebar" [ngClass]="{ 'opened': utilsService.isMobileSidebarOpen }">
+  <!-- Overlay -->
+  <div class="overlay" (click)="utilsService.closeMobileSidebar()"></div>
+
+  <!-- Sidebar -->
+  <div class="sidebar-content">
+    <!-- Close Button -->
+    <button class="close-btn" (click)="utilsService.closeMobileSidebar()" aria-label="Close Menu">
+      ✕
+    </button>
+
+    <!-- Menu -->
+    <div class="main-menu menu-style-2">
+      <nav class="tp-main-menu-content">
+        <app-menu-bar></app-menu-bar>
+      </nav>
+    </div>
+  </div>
+</div>

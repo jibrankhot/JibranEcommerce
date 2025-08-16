@@ -1,25 +1,33 @@
-/* Full header container */
 .header-full-width {
   width: 100%;
   display: flex;
-  align-items: center; /* Align logo, menu, search bar vertically */
+  align-items: center;
   background: inherit;
-  padding: 0; /* Keep compact */
-   height: 60px;
+  padding: 0 12px;
+  height: 60px;
 }
 
-/* Logo fully left */
+/* Hamburger button */
+.hamburger-btn {
+  background: none;
+  border: none;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  padding: 6px;
+}
+
+/* Logo */
 .logo {
   flex-shrink: 0;
-  padding-left: 12px;
   display: flex;
   align-items: center;
 }
 .logo img {
-  max-height: 38px; /* Compact logo */
+  max-height: 38px;
 }
 
-/* Main menu styling */
+/* Desktop menu */
 .tp-main-menu-content {
   flex: 1;
   margin-left: 30px;
@@ -27,40 +35,22 @@
   align-items: center;
 }
 
-/* Remove dropdown arrows */
-.tp-main-menu-content ul li > a::after {
-  content: none !important;
-  display: none !important;
-}
-.tp-main-menu-content ul li > a > svg,
-.tp-main-menu-content ul li > a > i,
-.tp-main-menu-content ul li > a > span.arrow {
-  display: none !important;
-}
-
-/* Remove shop-category-title completely */
-.shop-category-title {
-  display: none !important;
-}
-
-/* Right section styling */
+/* Right section */
 .tp-header-bottom-right {
   margin-left: auto !important;
   display: flex !important;
   align-items: center;
   gap: 15px;
-  padding-left: 0;
 }
 
-/* Force all action items visible */
 .tp-header-action-item {
-  display: flex !important;
+  display: flex;  
   position: relative;
 }
-
-.tp-header-action-item.d-none.d-lg-flex,
-.tp-header-action-item.d-none.d-lg-block {
-  display: flex !important;
+@media (min-width: 992px) {
+  .tp-header-action-item.d-lg-none {
+    display: none !important;
+  }
 }
 
 .tp-header-action-btn {
@@ -86,37 +76,30 @@
 }
 
 /* Search bar */
-.tp-header-search-2 {
-  margin-right: 10px;
-  display: flex;
-  align-items: center;
-}
-
-.tp-header-search-2 form {
-  position: relative; /* Needed for icon positioning */
-  display: flex;
-  align-items: center;
-}
-
 .tp-header-search-2 input {
   width: 280px;
- height: 40px;
- padding: 0 36px 0 12px; 
+  height: 40px;
+  padding: 0 36px 0 12px;
   border: 1px solid #eaeaec;
   border-radius: 4px;
   font-size: 14px;
 }
 
-.tp-header-search-2 button {
-  position: absolute;
-  right: 15px;
-  background: none;
-  border: none;
-  padding: 0;
-  font-size: 16px;
-  color: #666;
-  cursor: pointer;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+/* Responsive tweaks */
+@media (max-width: 992px) {
+  .tp-main-menu-content {
+    display: none; /* hide desktop nav */
+  }
+  .tp-header-search-2 input {
+    width: 180px;
+  }
+  .tp-header-bottom-right {
+    gap: 10px;
+  }
+}
+
+@media (max-width: 576px) {
+  .tp-header-search-2 {
+    display: none; /* hide search completely */
+  }
 }

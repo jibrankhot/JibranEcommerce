@@ -21,7 +21,7 @@ export class UtilsService {
       if (event instanceof NavigationEnd) {
         this.isSearchOpen = false;
         this.isProductModalOpen = false;
-        this.openMobileMenus = false;
+        this.isMobileSidebarOpen = false;   // ✅ close sidebar on route change
         this.removeBackdropAndProductModal();
       }
     });
@@ -29,25 +29,30 @@ export class UtilsService {
 
   // Flags
   public videoUrl: string = 'https://www.youtube.com/embed/EW4ZYb3mCZk';
-  public isVideoOpen: Boolean = false;
-  public isSearchOpen: Boolean = false;
-  public isProductModalOpen: Boolean = false;
-  public openMobileMenus: Boolean = false;
+  public isVideoOpen: boolean = false;
+  public isSearchOpen: boolean = false;
+  public isProductModalOpen: boolean = false;
   public iframeElement: HTMLIFrameElement | null = null;
 
   // Product modal
   public modalId: string = 'product-modal-641e887d05f9ee1717e1348a';
   public product: IProduct = product_data[0];
+  public isMobileSidebarOpen: boolean = false;
 
-  // Open mobile sidebar
-  handleOpenMobileMenu() {
-    this.openMobileMenus = !this.openMobileMenus;
+  // ✅ Mobile sidebar controls
+  openMobileSidebar() {
+    this.isMobileSidebarOpen = true;
+  }
+  closeMobileSidebar() {
+    this.isMobileSidebarOpen = false;
+  }
+  toggleMobileSidebar() {
+    this.isMobileSidebarOpen = !this.isMobileSidebarOpen;
   }
 
-  // Play video in modal
+  // Video modal
   playVideo(videoId: string) {
     if (!isPlatformBrowser(this.platformId)) return;
-
     const videoOverlay = document.querySelector('#video-overlay');
     this.videoUrl = `https://www.youtube.com/embed/${videoId}`;
 
@@ -63,27 +68,23 @@ export class UtilsService {
     videoOverlay?.appendChild(this.iframeElement);
   }
 
-  // Close video modal
   closeVideo() {
     if (!isPlatformBrowser(this.platformId)) return;
-
     const videoOverlay = document.querySelector('#video-overlay.open');
-
     if (this.iframeElement) {
       this.iframeElement.remove();
       this.iframeElement = null;
     }
-
     this.isVideoOpen = false;
     videoOverlay?.classList.remove('open');
   }
 
-  // Toggle search bar
+  // Search
   handleSearchOpen() {
     this.isSearchOpen = !this.isSearchOpen;
   }
 
-  // Open product modal
+  // Product modal
   handleOpenModal(id: string, item: IProduct) {
     this.isProductModalOpen = true;
     this.modalId = id;
@@ -92,10 +93,9 @@ export class UtilsService {
     this.cartService.initialOrderQuantity();
   }
 
-  // Remove modal backdrop and hide modal
+  // Remove modal backdrop
   removeBackdropAndProductModal() {
     if (!isPlatformBrowser(this.platformId)) return;
-
     const modalBackdrop = document.querySelector('.modal-backdrop');
     const product_modal = document.querySelector('.tp-product-modal.show') as HTMLElement;
 
@@ -108,5 +108,8 @@ export class UtilsService {
     if (product_modal) {
       product_modal.style.display = 'none';
     }
+  }
+  handleOpenMobileMenu() {
+    this.toggleMobileSidebar();
   }
 }

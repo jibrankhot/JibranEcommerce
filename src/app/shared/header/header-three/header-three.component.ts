@@ -10,10 +10,10 @@ import { MenuBarComponent } from "../header-com/menu-bar/menu-bar.component";
 
 
 @Component({
-    selector: 'app-header-three',
-    templateUrl: './header-three.component.html',
-    styleUrls: ['./header-three.component.scss'],
-    imports: [SharedModule, MobileSidebarComponent, HeaderSearchComponent, CartSidebarComponent, MenuBarComponent]
+  selector: 'app-header-three',
+  templateUrl: './header-three.component.html',
+  styleUrls: ['./header-three.component.scss'],
+  imports: [SharedModule, MobileSidebarComponent, HeaderSearchComponent, CartSidebarComponent, MenuBarComponent]
 })
 export class HeaderThreeComponent {
 
